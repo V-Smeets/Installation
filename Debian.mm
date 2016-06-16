@@ -119,6 +119,13 @@
 </node>
 </node>
 </node>
+<node TEXT="Mumble" ID="ID_1568901740">
+<node TEXT="192.168.1.2" ID="ID_1645246277">
+<node TEXT="64738..64738 =&gt; 64738..64738" ID="ID_108359581">
+<node TEXT="TCP/UDP" ID="ID_93571941"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="DNS" ID="ID_1928178539">
@@ -508,8 +515,20 @@
 </node>
 <node TEXT="ZyXEL" ID="ID_1251462701">
 <node TEXT="Port Forwarding" ID="ID_156539220">
-<node TEXT="Port 80 to RaspberryPi" ID="ID_693061425"/>
-<node TEXT="Port 443 to RaspberryPi" ID="ID_8390586"/>
+<node TEXT="HTTP" ID="ID_1978267741">
+<node TEXT="192.168.1.2" ID="ID_295234279">
+<node TEXT="80..80 =&gt; 80..80" ID="ID_1922926543">
+<node TEXT="TCP" ID="ID_1052259563"/>
+</node>
+</node>
+</node>
+<node TEXT="HTTPS" ID="ID_383652286">
+<node TEXT="192.168.1.2" ID="ID_463704868">
+<node TEXT="443..443 =&gt; 443..443" ID="ID_1688615457">
+<node TEXT="TCP" ID="ID_1188413749"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -553,7 +572,13 @@
 </node>
 <node TEXT="ZyXEL" ID="ID_78354548">
 <node TEXT="Port Forwarding" ID="ID_21916020">
-<node TEXT="Port 64738 TCP/UDP to RaspberryPi" ID="ID_1558920282"/>
+<node TEXT="Mumble" ID="ID_1336786627">
+<node TEXT="192.168.1.2" ID="ID_1185499824">
+<node TEXT="64738..64738 =&gt; 64738..64738" ID="ID_222456124">
+<node TEXT="TCP/UDP" ID="ID_656575818"/>
+</node>
+</node>
+</node>
 </node>
 </node>
 </node>
