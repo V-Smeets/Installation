@@ -226,6 +226,13 @@
 <node TEXT="reset_aptitude" ID="ID_1834905097">
 <node TEXT="name arch1_include shorewall" ID="ID_601656638"/>
 </node>
+<node TEXT="Bug #773392" ID="ID_949966487">
+<node TEXT="/etc/init.d/shorewall" ID="ID_1049517506">
+<node TEXT="# Default-Start:     2 3 4 5" ID="ID_1888684242"/>
+</node>
+<node TEXT="update-rc.d shorewall remove" ID="ID_564267949"/>
+<node TEXT="update-rc.d shorewall defaults" ID="ID_363559664"/>
+</node>
 <node TEXT="zones" ID="ID_214804655">
 <node TEXT="fw" ID="ID_1377756685">
 <node TEXT="firewall" ID="ID_304896321"/>
@@ -298,6 +305,13 @@
 <node TEXT="Shorewall6" ID="ID_1572706462">
 <node TEXT="reset_aptitude" ID="ID_512984956">
 <node TEXT="name arch1_include shorewall6" ID="ID_1347751350"/>
+</node>
+<node TEXT="Bug #773392" ID="ID_1426093956">
+<node TEXT="/etc/init.d/shorewall6" ID="ID_1374446322">
+<node TEXT="# Default-Start:     2 3 4 5" ID="ID_1404209255"/>
+</node>
+<node TEXT="update-rc.d shorewall6 remove" ID="ID_13379901"/>
+<node TEXT="update-rc.d shorewall6 defaults" ID="ID_1227756401"/>
 </node>
 <node TEXT="zones" ID="ID_1834294499">
 <node TEXT="fw" ID="ID_168662855">
