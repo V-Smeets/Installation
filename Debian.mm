@@ -513,7 +513,50 @@
 </node>
 </node>
 </node>
-<node TEXT="mumble" ID="ID_1022216434"/>
+<node TEXT="mumble" ID="ID_1022216434">
+<node TEXT="reset_aptitude" ID="ID_924158987">
+<node TEXT="name arch1_include mumble-server" ID="ID_931866168"/>
+</node>
+<node TEXT="/etc/mumble-server.ini" ID="ID_1547459396">
+<node TEXT="serverpassword=****" ID="ID_164784719"/>
+</node>
+<node TEXT="dpkg-reconfigure mumble-server" ID="ID_1498786080">
+<node TEXT="Autostart mumble-server on server boot?" ID="ID_513371770">
+<node TEXT="Yes" ID="ID_261326640"/>
+</node>
+<node TEXT="Allow mumble-server to use higher priority?" ID="ID_194738680">
+<node TEXT="No" ID="ID_30609582"/>
+</node>
+<node TEXT="Password to set on SuperUser account:" ID="ID_1669211125">
+<node TEXT="****" ID="ID_106339065"/>
+</node>
+</node>
+<node TEXT="shorewall" ID="ID_583050732">
+<node TEXT="/etc/shorewall/macro.Mumble" ID="ID_1400057549">
+<node TEXT="#&#xa;# Shorewall version 4 - Mumble Macro&#xa;#&#xa;# /usr/share/shorewall/macro.Mumble&#xa;#&#xa;# This macro handles Mumble traffic.&#xa;#&#xa;###############################################################################&#xa;?FORMAT 2&#xa;###############################################################################&#xa;#ACTION SOURCE DEST PROTO DEST SOURCE ORIGIN RATE USER/&#xa;# PORT(S) PORT(S) DEST LIMIT GROUP&#xa;PARAM - - tcp 64738&#xa;PARAM - - udp 64738" ID="ID_761702724"/>
+</node>
+<node TEXT="rules" ID="ID_1520066459">
+<node TEXT="?SECTION NEW" ID="ID_501481862">
+<node TEXT="Mumble(ACCEPT) local $FW" ID="ID_356839232"/>
+<node TEXT="Mumble(ACCEPT) world $FW" ID="ID_925084951"/>
+</node>
+</node>
+</node>
+<node TEXT="shorewall6" ID="ID_344121000">
+<node TEXT="ln -s ../shorewall/macro.Mumble ." ID="ID_645276051"/>
+<node TEXT="rules" ID="ID_223933771">
+<node TEXT="?SECTION NEW" ID="ID_562579073">
+<node TEXT="Mumble(ACCEPT) local $FW" ID="ID_1854835374"/>
+<node TEXT="Mumble(ACCEPT) world $FW" ID="ID_1880701855"/>
+</node>
+</node>
+</node>
+<node TEXT="ZyXEL" ID="ID_78354548">
+<node TEXT="Port Forwarding" ID="ID_21916020">
+<node TEXT="Port 64738 TCP/UDP to RaspberryPi" ID="ID_1558920282"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="PC-Vincent" POSITION="right" ID="ID_803098348"/>
 <node TEXT="PC-Tom" POSITION="right" ID="ID_675404597"/>
