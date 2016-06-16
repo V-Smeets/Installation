@@ -442,39 +442,10 @@
 </node>
 <node TEXT="apache2" ID="ID_1568583863">
 <node TEXT="reset_aptitude" ID="ID_206454463">
-<node TEXT="name arch1_include apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth gitweb" ID="ID_1254103460"/>
+<node TEXT="name arch1_include apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_1254103460"/>
 </node>
 <node TEXT="a2enmod ssl" ID="ID_21753644"/>
 <node TEXT="a2ensite default-ssl" ID="ID_1431214076"/>
-<node TEXT="git" ID="ID_439766352">
-<node TEXT="a2enmod alias" ID="ID_1121179451"/>
-<node TEXT="a2enmod cgi" ID="ID_674320179"/>
-<node TEXT="a2enmod env" ID="ID_1614493450"/>
-<node TEXT="a2enmod rewrite" ID="ID_1465599065"/>
-<node TEXT="mkdir -p /var/www/git" ID="ID_352529692"/>
-<node TEXT="chown -R www-data:www-data /var/www/git" ID="ID_1192843320"/>
-<node TEXT="chmod -R go-w /var/www/git" ID="ID_1333141692"/>
-<node TEXT="mods-available/authnz_external.conf" ID="ID_1054347830">
-<node TEXT="&lt;IfModule authnz_external_module&gt;&#xa;        AddExternalAuth pwauth /usr/sbin/pwauth&#xa;        SetExternalAuthMethod pwauth pipe&#xa;&lt;/IfModule&gt;&#xa;&#xa;# vim: syntax=apache ts=4 sw=4 sts=4 sr noet" ID="ID_747212518"/>
-</node>
-<node TEXT="a2enmod authnz_external" ID="ID_650727498"/>
-<node TEXT="addgroup --system git" ID="ID_701509419"/>
-<node TEXT="adduser vincent git" ID="ID_900382364"/>
-<node TEXT="a2enmod authz_unixgroup" ID="ID_1753812278"/>
-<node TEXT="conf-available/git.local.conf" ID="ID_766469191">
-<node TEXT="SetEnv  GIT_PROJECT_ROOT        /var/www/git&#xa;SetEnv  GIT_HTTP_EXPORT_ALL&#xa;ScriptAlias     /git/   /usr/lib/git-core/git-http-backend/&#xa;&#xa;RewriteEngine   On&#xa;RewriteCond     %{QUERY_STRING} service=git-receive-pack        [OR]&#xa;RewriteCond     %{REQUEST_URI}  /git-receive-pack$&#xa;RewriteRule     ^/git/  -       [E=AUTHREQUIRED:yes]&#xa;&#xa;&lt;LocationMatch &quot;^/git/&quot;&gt;&#xa;        SSLRequireSSL&#xa;        AuthType Basic&#xa;        AuthName &quot;Git repositories&quot;&#xa;        AuthBasicProvider external&#xa;        AuthExternal pwauth&#xa;        #Require user vincent&#xa;        Require unix-group git&#xa;&#xa;        Order   Deny,Allow&#xa;        Deny    from env=AUTHREQUIRED&#xa;&#xa;        Options -MultiViews&#xa;&lt;/LocationMatch&gt;&#xa;&#xa;# vim: syntax=apache ts=4 sw=4 sts=4 sr noet" ID="ID_488213174"/>
-</node>
-<node TEXT="a2enconf git.local" ID="ID_852083595"/>
-<node TEXT="/etc/gitweb.conf" ID="ID_1411246725">
-<node TEXT="$projectroot = &quot;/var/www/git&quot;;" ID="ID_956935711"/>
-</node>
-<node TEXT="conf-available/gitweb.conf" ID="ID_678801403">
-<node TEXT="diff --git a/conf-available/gitweb.conf b/conf-available/gitweb.conf&#xa;index abd288a..a882f56 100644&#xa;--- a/conf-available/gitweb.conf&#xa;+++ b/conf-available/gitweb.conf&#xa;@@ -11,6 +11,14 @@&#xa;   Alias /gitweb /usr/share/gitweb&#xa; &#xa;   &lt;Directory /usr/share/gitweb&gt;&#xa;+    SSLRequireSSL&#xa;+    AuthType Basic&#xa;+    AuthName &quot;Git repositories&quot;&#xa;+    AuthBasicProvider external&#xa;+    AuthExternal pwauth&#xa;+    #Require user vincent&#xa;+    Require unix-group git&#xa;+&#xa;     Options +FollowSymLinks +ExecCGI&#xa;     AddHandler cgi-script .cgi&#xa;   &lt;/Directory&gt;" ID="ID_1179858733"/>
-</node>
-<node TEXT="On the client" ID="ID_796523906">
-<node TEXT="git config --global --add http.https://www.vsmeets.nl/.sslVerify false" ID="ID_1174170786"/>
-</node>
-</node>
 <node TEXT="keepass" ID="ID_1372955566">
 <node TEXT="a2enmod dav_fs" ID="ID_1640859923"/>
 <node TEXT="mkdir -p /var/www/keepass" ID="ID_1929606048"/>
