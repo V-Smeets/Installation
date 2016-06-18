@@ -461,6 +461,88 @@
 </node>
 </node>
 </node>
+<node TEXT="aiccu" ID="ID_1818374816">
+<node TEXT="reset_aptitude" ID="ID_690270369">
+<node TEXT="name arch1_include aiccu" ID="ID_50775768"/>
+</node>
+<node TEXT="sudo dpkg-reconfigure aiccu" ID="ID_1495132264">
+<node TEXT="Aiccu username:" ID="ID_987862994">
+<node TEXT="VSR5-SIXXS" ID="ID_747301813"/>
+</node>
+<node TEXT="Aiccu password:" ID="ID_1795789650">
+<node TEXT="****" ID="ID_1344836273"/>
+</node>
+</node>
+<node TEXT="shorewall" ID="ID_935729280">
+<node TEXT="zones" ID="ID_12239795">
+<node TEXT="sixxs:world" ID="ID_443071033">
+<node TEXT="ipv4" ID="ID_958691849"/>
+</node>
+</node>
+<node TEXT="interfaces" ID="ID_384246404">
+<node TEXT="world" ID="ID_116973802">
+<node TEXT="sixxs" ID="ID_6072775">
+<node TEXT="tcpflags" ID="ID_1965437581"/>
+</node>
+</node>
+</node>
+<node TEXT="policy" ID="ID_410278102">
+<node TEXT="$FW" ID="ID_8374412">
+<node TEXT="sixxs" ID="ID_997037446">
+<node TEXT="ACCEPT" ID="ID_1626902360"/>
+</node>
+</node>
+<node TEXT="sixxs" ID="ID_1515067716">
+<node TEXT="$FW" ID="ID_1416803224">
+<node TEXT="REJECT" ID="ID_622298426">
+<node TEXT="info" ID="ID_1212091222"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="shorewall6" ID="ID_432864727">
+<node TEXT="zones" ID="ID_6747027">
+<node TEXT="sixxs:world" ID="ID_1423374488">
+<node TEXT="ipv6" ID="ID_868195459"/>
+</node>
+</node>
+<node TEXT="interfaces" ID="ID_945245672">
+<node TEXT="world" ID="ID_270036810">
+<node TEXT="sixxs" ID="ID_956782753">
+<node TEXT="tcpflags" ID="ID_549284239"/>
+</node>
+</node>
+</node>
+<node TEXT="hosts" ID="ID_1909317904">
+<node TEXT="sixxs" ID="ID_914008364">
+<node TEXT="sixxs:&lt;2001:1af8:fe00:0499::1/128&gt;" ID="ID_238002320"/>
+</node>
+</node>
+<node TEXT="policy" ID="ID_895973881">
+<node TEXT="$FW" ID="ID_997968884">
+<node TEXT="sixxs" ID="ID_1565461465">
+<node TEXT="ACCEPT" ID="ID_1449519078"/>
+</node>
+</node>
+<node TEXT="sixxs" ID="ID_1422138772">
+<node TEXT="$FW" ID="ID_415930458">
+<node TEXT="REJECT" ID="ID_471665669">
+<node TEXT="info" ID="ID_1832598579"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="rules" ID="ID_510597050">
+<node TEXT="?SECTION NEW" ID="ID_1531267610">
+<node TEXT="Ping(ACCEPT) sixxs $FW" ID="ID_493721193"/>
+</node>
+</node>
+</node>
+<node TEXT="/etc/cron.hourly/aiccu-restart" ID="ID_1478215337">
+<node TEXT="#!/bin/sh&#xa;#&#xa;ping6 -q -w 5 2001:1af8:fe00:499::1 &gt;/dev/null || service aiccu restart" ID="ID_1400835324"/>
+</node>
+</node>
 <node TEXT="apache2" ID="ID_1568583863">
 <node TEXT="reset_aptitude" ID="ID_206454463">
 <node TEXT="name arch1_include apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_1254103460"/>
