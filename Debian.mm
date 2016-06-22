@@ -543,6 +543,45 @@
 <node TEXT="#!/bin/sh&#xa;#&#xa;ping6 -q -w 5 2001:1af8:fe00:499::1 &gt;/dev/null || service aiccu restart" ID="ID_1400835324"/>
 </node>
 </node>
+<node TEXT="radvd" ID="ID_1774051343">
+<node TEXT="reset_aptitude" ID="ID_1992310622">
+<node TEXT="name arch1_include radvd" ID="ID_1633448224"/>
+</node>
+<node TEXT="/etc/aiccu.conf" ID="ID_253011220">
+<node TEXT="setupscript /etc/aiccu-subnets.sh" ID="ID_1860583544"/>
+</node>
+<node TEXT="/etc/aiccu-subnets.sh" ID="ID_1442245474">
+<node TEXT="#!/bin/sh&#xa;#&#xa;ip addr add 2001:1af8:fe00:8499::1/64 dev eth0" ID="ID_89011426"/>
+</node>
+<node TEXT="/etc/sysctl.d/50-radvd-local.conf" ID="ID_444166171">
+<node TEXT="net.ipv6.conf.all.forwarding=1" ID="ID_524386793"/>
+</node>
+<node TEXT="shorewall6" ID="ID_837213100">
+<node TEXT="shorewall6.conf" ID="ID_1965878763">
+<node TEXT="IP_FORWARDING=Keep" ID="ID_1455635713"/>
+</node>
+<node TEXT="hosts" ID="ID_981394282">
+<node TEXT="local" ID="ID_1997394331">
+<node TEXT="sixxs:&lt;2001:1af8:fe00:8499::/64&gt;" ID="ID_1354990791"/>
+</node>
+</node>
+<node TEXT="policy" ID="ID_1158920546">
+<node TEXT="local" ID="ID_1652760147">
+<node TEXT="sixxs" ID="ID_1199964714">
+<node TEXT="ACCEPT" ID="ID_744087624"/>
+</node>
+</node>
+<node TEXT="local" ID="ID_109333668">
+<node TEXT="world" ID="ID_1543751137">
+<node TEXT="ACCEPT" ID="ID_918755159"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="/etc/radvd.conf" ID="ID_526046806">
+<node TEXT="interface eth0 {&#xa;        AdvSendAdvert on;&#xa;        prefix 2001:1af8:fe00:8499::/64 {&#xa;        };&#xa;        DNSSL vsmeets.nl {&#xa;        };&#xa;};" ID="ID_1935995001"/>
+</node>
+</node>
 <node TEXT="apache2" ID="ID_1568583863">
 <node TEXT="reset_aptitude" ID="ID_206454463">
 <node TEXT="name arch1_include apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_1254103460"/>
