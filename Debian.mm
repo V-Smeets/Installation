@@ -1076,6 +1076,13 @@
 <node TEXT="Yes" ID="ID_1492209030"/>
 </node>
 </node>
+<node TEXT="Users" ID="ID_123837357">
+<node TEXT="s230984" ID="ID_1340693626">
+<node TEXT="adduser s230984 adm" ID="ID_1217996736"/>
+<node TEXT="adduser s230984 sudo" ID="ID_3590053"/>
+<node TEXT="echo &quot;s230984 ALL=(ALL) NOPASSWD: ALL&quot; | sudo tee /etc/sudoers.d/s230984" ID="ID_795941913"/>
+</node>
+</node>
 </node>
 </node>
 </map>
