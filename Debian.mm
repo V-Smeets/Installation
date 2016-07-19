@@ -706,5 +706,376 @@
 </node>
 <node TEXT="PC-Vincent" POSITION="right" ID="ID_803098348"/>
 <node TEXT="PC-Tom" POSITION="right" ID="ID_675404597"/>
+<node TEXT="dempwr00023" POSITION="right" ID="ID_411280416">
+<node TEXT="Installation" ID="ID_1969918291">
+<node TEXT="Expert install" ID="ID_1517154217"/>
+<node TEXT="Language:" ID="ID_1991616334">
+<node TEXT="English" ID="ID_904473892"/>
+</node>
+<node TEXT="Country, territory or area:" ID="ID_1317932634">
+<node TEXT="Germany" ID="ID_471140941"/>
+</node>
+<node TEXT="Country to base default locale settings on:" ID="ID_1009173028">
+<node TEXT="United States en_US.UTF-8" ID="ID_1159341123"/>
+</node>
+<node TEXT="Additional locales:" ID="ID_1885242312">
+<node TEXT="de_DE.UTF-8" ID="ID_698131347"/>
+</node>
+<node TEXT="System locale:" ID="ID_708023428">
+<node TEXT="en_US-UTF-8" ID="ID_15645325"/>
+</node>
+<node TEXT="Keymap to use:" ID="ID_1518605934">
+<node TEXT="German" ID="ID_543147138"/>
+</node>
+<node TEXT="Installer components to load:" ID="ID_1662951424">
+<node TEXT="&lt;none&gt;" ID="ID_1329899596"/>
+</node>
+<node TEXT="Auto-configure networking?" ID="ID_1413489086">
+<node TEXT="Yes" ID="ID_278383623"/>
+</node>
+<node TEXT="Hostname:" ID="ID_516789897">
+<node TEXT="dempwr00023" ID="ID_1113516255"/>
+</node>
+<node TEXT="Domain name:" ID="ID_430881633">
+<node TEXT="ww930-my-it-solutions.net" ID="ID_1181437879"/>
+</node>
+<node TEXT="Enable shadow passwords?" ID="ID_1504623699">
+<node TEXT="Yes" ID="ID_931813844"/>
+</node>
+<node TEXT="Allow login as root?" ID="ID_1293068956">
+<node TEXT="No" ID="ID_1373666436"/>
+</node>
+<node TEXT="Full name for the new user:" ID="ID_1900753673">
+<node TEXT="Vincent Smeets" ID="ID_521055026"/>
+</node>
+<node TEXT="Username for your account:" ID="ID_1082536910">
+<node TEXT="s230984" ID="ID_366119195"/>
+</node>
+<node TEXT="Choose a password for the new user:" ID="ID_1595001442">
+<node TEXT="****" ID="ID_1586878997"/>
+</node>
+<node TEXT="Set the clock using NTP?" ID="ID_1495643102">
+<node TEXT="Yes" ID="ID_1295739465"/>
+</node>
+<node TEXT="NTP server to use:" ID="ID_1872155066">
+<node TEXT="0.debian.pool.ntp.org" ID="ID_540694801"/>
+</node>
+<node TEXT="Select your time zone:" ID="ID_326297209">
+<node TEXT="Europe/Berlin" ID="ID_345948672"/>
+</node>
+<node TEXT="Partition method:" ID="ID_587736743">
+<node TEXT="Manual" ID="ID_1098463424"/>
+</node>
+<node TEXT="Partition disks" ID="ID_1788590371">
+<node TEXT="ATA SAMSUNG SP2504C" ID="ID_793319746">
+<node TEXT="1" OBJECT="java.lang.Long|1" ID="ID_1842155639">
+<node TEXT="Size:" ID="ID_574412688">
+<node TEXT="256M" ID="ID_50059246"/>
+</node>
+<node TEXT="Name:" ID="ID_1338473865">
+<node TEXT="boot" ID="ID_1165879899"/>
+</node>
+<node TEXT="Use as:" ID="ID_1816139348">
+<node TEXT="ext4" ID="ID_1910712540"/>
+</node>
+<node TEXT="Mount point:" ID="ID_1250106845">
+<node TEXT="/boot" ID="ID_269282929"/>
+</node>
+<node TEXT="Mount options:" ID="ID_536333014">
+<node TEXT="defaults" ID="ID_1077157575"/>
+</node>
+<node TEXT="Label" ID="ID_454842285">
+<node TEXT="boot" ID="ID_1012042730"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_1498180171">
+<node TEXT="5%" ID="ID_1651295031"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_1853316348">
+<node TEXT="standard" ID="ID_1213868059"/>
+</node>
+<node TEXT="Bootable flag:" ID="ID_1274145676">
+<node TEXT="off" ID="ID_1851011266"/>
+</node>
+</node>
+<node TEXT="2" OBJECT="java.lang.Long|2" ID="ID_1691649598">
+<node TEXT="Size:" ID="ID_1914211447">
+<node TEXT="max" ID="ID_1886316543"/>
+</node>
+<node TEXT="Name:" ID="ID_1637649581"/>
+<node TEXT="Use as:" ID="ID_1800795892">
+<node TEXT="physical volume for LVM" ID="ID_324511804"/>
+</node>
+<node TEXT="Bootable flag:" ID="ID_592296563">
+<node TEXT="off" ID="ID_703668985"/>
+</node>
+</node>
+</node>
+<node TEXT="WD Ext HDD 1021" ID="ID_539839310">
+<node TEXT="1" OBJECT="java.lang.Long|1" ID="ID_1653606516">
+<node TEXT="Use as:" ID="ID_329553532">
+<node TEXT="ext3" ID="ID_1591502850"/>
+</node>
+<node TEXT="Format the partition:" ID="ID_785263796">
+<node TEXT="no" ID="ID_723933363"/>
+</node>
+<node TEXT="Mount point:" ID="ID_379371919">
+<node TEXT="/var/backups" ID="ID_975129623"/>
+</node>
+<node TEXT="Mount options:" ID="ID_532107581">
+<node TEXT="defaults" ID="ID_1876289517"/>
+</node>
+<node TEXT="Bootable flag:" ID="ID_1039488463">
+<node TEXT="off" ID="ID_1237575911"/>
+</node>
+</node>
+</node>
+<node TEXT="LVM" ID="ID_196116513">
+<node TEXT="dempwr00023" ID="ID_252835591">
+<node TEXT="root" ID="ID_747627139">
+<node TEXT="Logical volume size:" ID="ID_1694045975">
+<node TEXT="1G" ID="ID_364794809"/>
+</node>
+<node TEXT="Use as:" ID="ID_742129819">
+<node TEXT="ext4" ID="ID_1019186691"/>
+</node>
+<node TEXT="Mount point:" ID="ID_532052944">
+<node TEXT="/" ID="ID_1305052401"/>
+</node>
+<node TEXT="Mount options:" ID="ID_1005884655">
+<node TEXT="defaults" ID="ID_5599909"/>
+</node>
+<node TEXT="Label:" ID="ID_734260978">
+<node TEXT="root" ID="ID_416345792"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_908079042">
+<node TEXT="5%" ID="ID_394508823"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_1449874783">
+<node TEXT="standard" ID="ID_592654935"/>
+</node>
+</node>
+<node TEXT="swap" ID="ID_600186964">
+<node TEXT="Logical volume size:" ID="ID_112626778">
+<node TEXT="8G" ID="ID_720973668"/>
+</node>
+<node TEXT="Use as:" ID="ID_683791212">
+<node TEXT="swap area" ID="ID_1955498369"/>
+</node>
+</node>
+<node TEXT="home" ID="ID_1397897513">
+<node TEXT="Logical volume size:" ID="ID_1560037631">
+<node TEXT="8G" ID="ID_151120319"/>
+</node>
+<node TEXT="Use as:" ID="ID_1939727407">
+<node TEXT="ext4" ID="ID_1244983866"/>
+</node>
+<node TEXT="Mount point:" ID="ID_540835341">
+<node TEXT="/home" ID="ID_1457329743"/>
+</node>
+<node TEXT="Mount options:" ID="ID_1622958473">
+<node TEXT="defaults" ID="ID_657905888"/>
+</node>
+<node TEXT="Label:" ID="ID_1608308190">
+<node TEXT="home" ID="ID_1654361235"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_1869110114">
+<node TEXT="5%" ID="ID_590035451"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_442217904">
+<node TEXT="standard" ID="ID_916420459"/>
+</node>
+</node>
+<node TEXT="tmp" ID="ID_279918065">
+<node TEXT="Logical volume size:" ID="ID_1786553373">
+<node TEXT="2G" ID="ID_566899287"/>
+</node>
+<node TEXT="Use as:" ID="ID_1245582470">
+<node TEXT="ext4" ID="ID_1291470552"/>
+</node>
+<node TEXT="Mount point:" ID="ID_1197690051">
+<node TEXT="/tmp" ID="ID_186548062"/>
+</node>
+<node TEXT="Mount options:" ID="ID_1531446256">
+<node TEXT="defaults" ID="ID_17014119"/>
+</node>
+<node TEXT="Label:" ID="ID_1717434146">
+<node TEXT="tmp" ID="ID_1467155351"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_270251010">
+<node TEXT="5%" ID="ID_816933432"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_430303250">
+<node TEXT="standard" ID="ID_1876395110"/>
+</node>
+</node>
+<node TEXT="usr" ID="ID_1879901434">
+<node TEXT="Logical volume size:" ID="ID_1154701738">
+<node TEXT="4G" ID="ID_1454095315"/>
+</node>
+<node TEXT="Use as:" ID="ID_1469327746">
+<node TEXT="ext4" ID="ID_50517134"/>
+</node>
+<node TEXT="Mount point:" ID="ID_789341860">
+<node TEXT="/usr" ID="ID_773504658"/>
+</node>
+<node TEXT="Mount options:" ID="ID_1025223894">
+<node TEXT="defaults" ID="ID_1193436417"/>
+</node>
+<node TEXT="Label:" ID="ID_1124595331">
+<node TEXT="usr" ID="ID_641862410"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_25312501">
+<node TEXT="5%" ID="ID_1137195991"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_1788119451">
+<node TEXT="standard" ID="ID_1346744647"/>
+</node>
+</node>
+<node TEXT="var" ID="ID_688974535">
+<node TEXT="Logical volume size:" ID="ID_791258101">
+<node TEXT="4G" ID="ID_402660928"/>
+</node>
+<node TEXT="Use as:" ID="ID_10791532">
+<node TEXT="ext4" ID="ID_1159481222"/>
+</node>
+<node TEXT="Mount point:" ID="ID_396187653">
+<node TEXT="/var" ID="ID_1656279358"/>
+</node>
+<node TEXT="Mount options:" ID="ID_1448568163">
+<node TEXT="defaults" ID="ID_91961"/>
+</node>
+<node TEXT="Label:" ID="ID_746160454">
+<node TEXT="var" ID="ID_492532595"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_699675465">
+<node TEXT="5%" ID="ID_1187756070"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_1480942100">
+<node TEXT="standard" ID="ID_1415241804"/>
+</node>
+</node>
+<node TEXT="srv" ID="ID_708349328">
+<node TEXT="Logical volume size:" ID="ID_1080459340">
+<node TEXT="1G" ID="ID_32437489"/>
+</node>
+<node TEXT="Use as:" ID="ID_1829643111">
+<node TEXT="ext4" ID="ID_1681495259"/>
+</node>
+<node TEXT="Mount point:" ID="ID_1509005766">
+<node TEXT="/srv" ID="ID_1135513737"/>
+</node>
+<node TEXT="Mount options:" ID="ID_702580417">
+<node TEXT="defaults" ID="ID_709280964"/>
+</node>
+<node TEXT="Label:" ID="ID_641371063">
+<node TEXT="srv" ID="ID_224420637"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_834765882">
+<node TEXT="5%" ID="ID_1752762137"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_74185162">
+<node TEXT="standard" ID="ID_800723839"/>
+</node>
+</node>
+<node TEXT="opt" ID="ID_836428069">
+<node TEXT="Logical volume size:" ID="ID_1522192405">
+<node TEXT="1G" ID="ID_1402397472"/>
+</node>
+<node TEXT="Use as:" ID="ID_1771176831">
+<node TEXT="ext4" ID="ID_776618485"/>
+</node>
+<node TEXT="Mount point:" ID="ID_764275929">
+<node TEXT="/opt" ID="ID_492178204"/>
+</node>
+<node TEXT="Mount options:" ID="ID_1802268890">
+<node TEXT="defaults" ID="ID_1286117329"/>
+</node>
+<node TEXT="Label:" ID="ID_286030881">
+<node TEXT="opt" ID="ID_1507231157"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_605883095">
+<node TEXT="5%" ID="ID_554178449"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_555850797">
+<node TEXT="standard" ID="ID_1131650557"/>
+</node>
+</node>
+<node TEXT="local" ID="ID_1447710259">
+<node TEXT="Logical volume size:" ID="ID_1033718703">
+<node TEXT="8G" ID="ID_1426318351"/>
+</node>
+<node TEXT="Use as:" ID="ID_1382955773">
+<node TEXT="ext4" ID="ID_128358824"/>
+</node>
+<node TEXT="Mount point:" ID="ID_80685612">
+<node TEXT="/usr/local" ID="ID_294914810"/>
+</node>
+<node TEXT="Mount options:" ID="ID_1598729695">
+<node TEXT="defaults" ID="ID_743173106"/>
+</node>
+<node TEXT="Label:" ID="ID_1148580079">
+<node TEXT="local" ID="ID_152432276"/>
+</node>
+<node TEXT="Reserved blocks:" ID="ID_753179515">
+<node TEXT="5%" ID="ID_1087306861"/>
+</node>
+<node TEXT="Typical usage:" ID="ID_1563867795">
+<node TEXT="standard" ID="ID_404022393"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Kernel to install:" ID="ID_665432960">
+<node TEXT="linux-image-amd64" ID="ID_1597873495"/>
+</node>
+<node TEXT="Drivers to include in the initrd:" ID="ID_662487329">
+<node TEXT="generic" ID="ID_1626619568"/>
+</node>
+<node TEXT="Use a network mirror?" ID="ID_550059665">
+<node TEXT="Yes" ID="ID_1712955634"/>
+</node>
+<node TEXT="Protocol for file downloads:" ID="ID_154807611">
+<node TEXT="http" ID="ID_1241851193"/>
+</node>
+<node TEXT="Debian archive mirror country:" ID="ID_1350529006">
+<node TEXT="Germany" ID="ID_1353376542"/>
+</node>
+<node TEXT="Debian archive mirror:" ID="ID_1827343509">
+<node TEXT="ftp.de.debian.org" ID="ID_1425902302"/>
+</node>
+<node TEXT="HTTP proxy information" ID="ID_1985880639">
+<node TEXT="&lt;none&gt;" ID="ID_1520923167"/>
+</node>
+<node TEXT="Use non-free software?" ID="ID_1341942770">
+<node TEXT="Yes" ID="ID_1063171290"/>
+</node>
+<node TEXT="Enable source repositories in APT?" ID="ID_1547628184">
+<node TEXT="Yes" ID="ID_105755373"/>
+</node>
+<node TEXT="Services to use:" ID="ID_414101785">
+<node TEXT="security updates" ID="ID_778116918"/>
+</node>
+<node TEXT="Participate in the package usage survey?" ID="ID_666879300">
+<node TEXT="Yes" ID="ID_1686069888"/>
+</node>
+<node TEXT="Choose software to install:" ID="ID_610923445">
+<node TEXT="SSH server" ID="ID_777599029"/>
+<node TEXT="standard system utilities" ID="ID_558880473"/>
+</node>
+<node TEXT="Install the GRUB boot loader to the master boot record?" ID="ID_1434419096">
+<node TEXT="Yes" ID="ID_1856901608"/>
+</node>
+<node TEXT="Device for boot loader installation:" ID="ID_1107900327">
+<node TEXT="ata-SAMSUNG_SP2504C" ID="ID_1384829872"/>
+</node>
+<node TEXT="Force GRUB installation to the EFI removable media path?" ID="ID_1556616637">
+<node TEXT="No" ID="ID_1921449688"/>
+</node>
+<node TEXT="Is the system clock set to UTC?" ID="ID_124592486">
+<node TEXT="Yes" ID="ID_1492209030"/>
+</node>
+</node>
+</node>
 </node>
 </map>
