@@ -1125,6 +1125,82 @@
 </node>
 <node TEXT="reset_aptitude" ID="ID_1483832442"/>
 </node>
+<node TEXT="Shorewall" ID="ID_1312818152">
+<node TEXT="reset_aptitude" ID="ID_1995470002">
+<node TEXT="name arch1_include shorewall" ID="ID_1047573065"/>
+</node>
+<node TEXT="Bug #773392" ID="ID_1461995124">
+<node TEXT="/etc/init.d/shorewall" ID="ID_1488952409">
+<node TEXT="# Default-Start:     2 3 4 5" ID="ID_1859310248"/>
+</node>
+<node TEXT="update-rc.d shorewall remove" ID="ID_120663750"/>
+<node TEXT="update-rc.d shorewall defaults" ID="ID_387381095"/>
+</node>
+<node TEXT="zones" ID="ID_1558370844">
+<node TEXT="fw" ID="ID_1194521938">
+<node TEXT="firewall" ID="ID_1292178590"/>
+</node>
+<node TEXT="world" ID="ID_1798343206">
+<node TEXT="ipv4" ID="ID_1911460280"/>
+</node>
+<node TEXT="atos" ID="ID_550743324">
+<node TEXT="ipv4" ID="ID_646872786"/>
+</node>
+</node>
+<node TEXT="interfaces" ID="ID_1274248069">
+<node TEXT="atos" ID="ID_343778531">
+<node TEXT="enp0s25" ID="ID_575621935">
+<node TEXT="dhcp,tcpflags" ID="ID_1461384911"/>
+</node>
+</node>
+</node>
+<node TEXT="policy" ID="ID_274737819">
+<node TEXT="$FW" ID="ID_1185826146">
+<node TEXT="atos" ID="ID_656698380">
+<node TEXT="ACCEPT" ID="ID_90301700"/>
+</node>
+</node>
+<node TEXT="$FW" ID="ID_752196507">
+<node TEXT="world" ID="ID_63008564">
+<node TEXT="ACCEPT" ID="ID_552220166"/>
+</node>
+</node>
+<node TEXT="atos" ID="ID_243273086">
+<node TEXT="$FW" ID="ID_1212035070">
+<node TEXT="REJECT" ID="ID_1377151093">
+<node TEXT="info" ID="ID_1053222110"/>
+</node>
+</node>
+</node>
+<node TEXT="world" ID="ID_207858296">
+<node TEXT="$FW" ID="ID_838414538">
+<node TEXT="DROP" ID="ID_179459088">
+<node TEXT="info" ID="ID_442849494"/>
+</node>
+</node>
+</node>
+<node TEXT="all" ID="ID_895629776">
+<node TEXT="all" ID="ID_1650515585">
+<node TEXT="REJECT" ID="ID_189888922">
+<node TEXT="info" ID="ID_1107748701"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="rules" ID="ID_97609833">
+<node TEXT="?SECTION NEW" ID="ID_1920296559">
+<node TEXT="SSH(ACCEPT)" ID="ID_247640530">
+<node TEXT="atos" ID="ID_1989617539">
+<node TEXT="$FW" ID="ID_234201747"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="/etc/default/shorewall" ID="ID_1436096842">
+<node TEXT="startup=1" ID="ID_418401156"/>
+</node>
+<node TEXT="systemctl enable shorewall.service" ID="ID_1555858725"/>
+</node>
 </node>
 </node>
 </map>
