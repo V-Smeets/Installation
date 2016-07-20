@@ -1080,8 +1080,50 @@
 <node TEXT="s230984" ID="ID_1340693626">
 <node TEXT="adduser s230984 adm" ID="ID_1217996736"/>
 <node TEXT="adduser s230984 sudo" ID="ID_3590053"/>
-<node TEXT="echo &quot;s230984 ALL=(ALL) NOPASSWD: ALL&quot; | sudo tee /etc/sudoers.d/s230984" ID="ID_795941913"/>
+<node TEXT="/etc/sudoers.d/s230984" ID="ID_594063402">
+<node TEXT="Defaults:s230984        env_keep += http_proxy" ID="ID_1206121344"/>
+<node TEXT="Defaults:s230984        env_keep += https_proxy" ID="ID_1577604173"/>
+<node TEXT="s230984    ALL=(ALL)    NOPASSWD:    ALL" ID="ID_795941913"/>
 </node>
+</node>
+</node>
+<node TEXT="cntlm" ID="ID_532273814">
+<node TEXT="apt-get install cntlm" ID="ID_1926673416"/>
+<node TEXT="/etc/cntlm.conf" ID="ID_320711761">
+<node TEXT="Username" ID="ID_716300004">
+<node TEXT="s230984" ID="ID_822886139"/>
+</node>
+<node TEXT="Domain" ID="ID_1960668704">
+<node TEXT="ww930.my-it-solutions.net" ID="ID_919336759"/>
+</node>
+<node TEXT="# Password" ID="ID_1215850588"/>
+<node TEXT="/usr/sbin/cntlm -u s230984@ww930.my-it-solutions.net -H" ID="ID_1222771593"/>
+<node TEXT="Proxy" ID="ID_841267437">
+<node TEXT="proxy-de.glb.my-it-solutions.net:84" ID="ID_648529222"/>
+</node>
+<node TEXT="Proxy" ID="ID_954963788">
+<node TEXT="proxy-fr.glb.my-it-solutions.net:84" ID="ID_1714156534"/>
+</node>
+</node>
+<node TEXT="/etc/environment" ID="ID_1698871987">
+<node TEXT="http_proxy=http://localhost:3128" ID="ID_340307788"/>
+<node TEXT="https_proxy=http://localhost:3128" ID="ID_1990691034"/>
+</node>
+</node>
+<node TEXT="apt" ID="ID_181570920">
+<node TEXT="/etc/apt/apt.conf.d/02proxy" ID="ID_521464583">
+<node TEXT="Acquire::http::Pipeline-Depth    0;" ID="ID_1653859507"/>
+</node>
+<node TEXT="apt-get update" ID="ID_581788829"/>
+<node TEXT="apt-get upgrade" ID="ID_1838413051"/>
+<node TEXT="apt-get install aptitude git gitk" ID="ID_1147706202"/>
+<node TEXT="mkdir -p ~/src" ID="ID_1062673663"/>
+<node TEXT="git clone https://github.com/V-Smeets/profile.git ~/src/profile" ID="ID_1733715578"/>
+<node TEXT="ln --symbolic --force src/profile/.profile ." ID="ID_1152562240"/>
+<node TEXT="/root/.aptitude/config" ID="ID_646226263">
+<node TEXT="aptitude::UI::Default-Grouping &quot;status,pattern(?or(?archive(),?true))&quot;;" ID="ID_1274559069"/>
+</node>
+<node TEXT="reset_aptitude" ID="ID_1483832442"/>
 </node>
 </node>
 </node>
