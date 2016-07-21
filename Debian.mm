@@ -1283,6 +1283,55 @@
 </node>
 <node TEXT="timedatectl set-ntp true" ID="ID_1722643617"/>
 </node>
+<node TEXT="exim4" ID="ID_1592261874">
+<node TEXT="reset_aptitude" ID="ID_273613310">
+<node TEXT="name arch1_include exim4" ID="ID_263667763"/>
+</node>
+<node TEXT="dpkg-reconfigure exim4-config" ID="ID_1051053635">
+<node TEXT="General type of mail configuration:" ID="ID_1113910859">
+<node TEXT="mail sent by smarthost; received via SMTP or fetchmail" ID="ID_170185254"/>
+</node>
+<node TEXT="System mail name:" ID="ID_1783702706">
+<node TEXT="dempwr00023.ww930.my-it-solutions.net" ID="ID_527012533"/>
+</node>
+<node TEXT="IP-addresses to listen on for incoming SMTP connections:" ID="ID_1288333889">
+<node TEXT="127.0.0.1 ; ::1" ID="ID_1739758301"/>
+</node>
+<node TEXT="Other destinations for which mail is accepted:" ID="ID_1603241892">
+<node TEXT="&lt;empty&gt;" ID="ID_856824341"/>
+</node>
+<node TEXT="Machines to relay mail for:" ID="ID_743279098">
+<node TEXT="&lt;empty&gt;" ID="ID_960874797"/>
+</node>
+<node TEXT="IP address or host name of the outgoing smarthost:" ID="ID_831086907">
+<node TEXT="mail.my-it-solutions.net" ID="ID_1887907424"/>
+</node>
+<node TEXT="Hide local mail name in outgoing mail?" ID="ID_899433161">
+<node TEXT="No" ID="ID_1044235009"/>
+</node>
+<node TEXT="Keep number of DNS-queries minimal (Dial-on-Demand)?" ID="ID_1834465059">
+<node TEXT="No" ID="ID_341282717"/>
+</node>
+<node TEXT="Delivery method for local mail:" ID="ID_1066294124">
+<node TEXT="mbox format in /var/mail/" ID="ID_792216650"/>
+</node>
+<node TEXT="Split configuration into small files?" ID="ID_526404086">
+<node TEXT="Yes" ID="ID_1634433322"/>
+</node>
+</node>
+<node TEXT="/etc/email-addresses" ID="ID_352593760">
+<node TEXT="root: Vincent.Smeets@atos.net" ID="ID_442490536"/>
+<node TEXT="s230984: Vincent.Smeets@atos.net" ID="ID_1693916527"/>
+</node>
+<node TEXT="/etc/exim4/exim4.conf.template" ID="ID_559901275">
+<node TEXT="rewrite/31_exim4-config_rewriting" ID="ID_1346660327">
+<node TEXT="*@+local_domains &quot;${lookup{${local_part}}lsearch{/etc/email-addresses} {$value}fail}&quot; Eh" ID="ID_310647497"/>
+<node TEXT="*@ETC_MAILNAME &quot;${lookup{${local_part}}lsearch{/etc/email-addresses} {$value}fail}&quot; Eh" ID="ID_426750797"/>
+</node>
+</node>
+<node TEXT="update-exim4.conf" ID="ID_1728089449"/>
+<node TEXT="service exim4 restart" ID="ID_634169227"/>
+</node>
 </node>
 </node>
 </map>
