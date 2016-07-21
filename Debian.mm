@@ -1277,6 +1277,12 @@
 </node>
 <node TEXT="systemctl enable shorewall6.service" ID="ID_649414932"/>
 </node>
+<node TEXT="ntp" ID="ID_419966576">
+<node TEXT="/etc/systemd/timesyncd.conf" ID="ID_629527387">
+<node TEXT="NTP=161.90.190.1 161.90.190.2 161.90.190.3 161.90.190.8 161.90.190.9 161.90.190.50 172.29.60.4 172.29.61.41" ID="ID_1025749303"/>
+</node>
+<node TEXT="timedatectl set-ntp true" ID="ID_1722643617"/>
+</node>
 </node>
 </node>
 </map>
