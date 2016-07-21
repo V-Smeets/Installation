@@ -1332,6 +1332,17 @@
 <node TEXT="update-exim4.conf" ID="ID_1728089449"/>
 <node TEXT="service exim4 restart" ID="ID_634169227"/>
 </node>
+<node TEXT="dump" ID="ID_945452579">
+<node TEXT="reset_aptitude" ID="ID_421138175">
+<node TEXT="name arch1_include dump" ID="ID_233376079"/>
+</node>
+<node TEXT="ln -s /home/s230984/src/profile/bin/dump-ext.cron /etc/cron.hourly/dump-ext" ID="ID_754942703"/>
+<node TEXT="/etc/fstab" ID="ID_904273175">
+<node TEXT="/" ID="ID_763525869"/>
+<node TEXT="/home" ID="ID_1720214020"/>
+<node TEXT="/usr/local" ID="ID_629992745"/>
+</node>
+</node>
 </node>
 </node>
 </map>
