@@ -1524,6 +1524,21 @@
 <node TEXT="/usr/local" ID="ID_629992745"/>
 </node>
 </node>
+<node TEXT="OpenJDK-6" ID="ID_1464186815" CREATED="1469177424027" MODIFIED="1469177461237">
+<node TEXT="/etc/apt/sources.list.d/experimental.list" ID="ID_840272588" CREATED="1469178640436" MODIFIED="1469178796650">
+<node TEXT="deb http://ftp.de.debian.org/debian/ experimental main non-free contrib" ID="ID_531601851" CREATED="1469178664392" MODIFIED="1469178686431"/>
+<node TEXT="deb-src http://ftp.de.debian.org/debian/ experimental main non-free contrib" ID="ID_82783064" CREATED="1469178664392" MODIFIED="1469178705637"/>
+</node>
+<node TEXT="/etc/apt/preferences.d/experimental" ID="ID_580701482" CREATED="1469179213536" MODIFIED="1469179218891">
+<node TEXT="Package: *&#xa;Pin: release o=Debian,a=experimental&#xa;Pin-Priority: -1" ID="ID_1846724044" CREATED="1469179236031" MODIFIED="1469179242597"/>
+</node>
+<node TEXT="/etc/apt/preferences.d/openjdk-6-jdk" ID="ID_81223433" CREATED="1472633867384" MODIFIED="1472633870106">
+<node TEXT="Package: openjdk-6-jdk openjdk-6-jre openjdk-6-jre-headless openjdk-6-jre-lib icedtea-6-jre-cacao icedtea-6-jre-jamvm&#xa;Pin: release o=Debian&#xa;Pin-Priority: 500" ID="ID_546673115" CREATED="1472633877160" MODIFIED="1472633880579"/>
+</node>
+<node TEXT="reset_aptitude" ID="ID_1809317462" CREATED="1465726578955" MODIFIED="1465726578955">
+<node TEXT="name arch1_include openjdk-6-jdk" ID="ID_719527396" CREATED="1465726578955" MODIFIED="1469179750679"/>
+</node>
+</node>
 </node>
 </node>
 </map>
