@@ -704,7 +704,121 @@
 </node>
 </node>
 </node>
-<node TEXT="PC-Vincent" POSITION="right" ID="ID_803098348"/>
+<node TEXT="PC-Vincent" POSITION="right" ID="ID_803098348">
+<node TEXT="eclipse" ID="ID_213067285">
+<node TEXT="Download eclipse-inst-linux64.tar.gz" ID="ID_1738003362"/>
+<node TEXT="./eclipse-installer/eclipse-inst" ID="ID_17515250">
+<node TEXT="Eclipse IDE for Java EE Developers" ID="ID_1043899688"/>
+<node TEXT="Installation Folder" ID="ID_379333132">
+<node TEXT="/home/vincent/eclipse/jee-neon" ID="ID_509303897"/>
+</node>
+</node>
+<node TEXT="Help" ID="ID_1036269305">
+<node TEXT="Check for Updates" ID="ID_426527614"/>
+<node TEXT="Eclipse Marketplace" ID="ID_415463046">
+<node TEXT="Scala IDE 4.2.x" ID="ID_1348071915"/>
+</node>
+</node>
+<node TEXT="Window" ID="ID_1288967774">
+<node TEXT="Preferences" ID="ID_1315006219">
+<node TEXT="General" ID="ID_343935293">
+<node TEXT="Always run in background" ID="ID_664008605">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="Show heap status" ID="ID_1772602977">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="Startup and shutdown" ID="ID_288775683">
+<node TEXT="Refresh workspace on startup" ID="ID_567847447">
+<icon BUILTIN="checked"/>
+</node>
+</node>
+<node TEXT="Workspace" ID="ID_1591321261">
+<node TEXT="Save automatically before build" ID="ID_1486353896">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="workspace name" ID="ID_1473379058">
+<node TEXT="" ID="ID_1227967486">
+<icon BUILTIN="help"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Java" ID="ID_1292636471">
+<node TEXT="Code Style" ID="ID_682751098">
+<node TEXT="Code Templates" ID="ID_1967129289">
+<node TEXT="Automatically add comments for new methods and types" ID="ID_1670166194">
+<icon BUILTIN="checked"/>
+</node>
+</node>
+</node>
+<node TEXT="Debug" ID="ID_169106575">
+<node TEXT="Step Filtering" ID="ID_528390623">
+<node TEXT="Use Step Filters" ID="ID_1427761327">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="Defined step filters" ID="ID_203005287">
+<node TEXT="com.ibm.*" ID="ID_1646171006"/>
+<node TEXT="com.sun.*" ID="ID_1328880929"/>
+<node TEXT="java.*" ID="ID_739589190"/>
+<node TEXT="javax.*" ID="ID_1531289152"/>
+<node TEXT="jrockit.*" ID="ID_500340023"/>
+<node TEXT="org.omg.*" ID="ID_418568779"/>
+<node TEXT="sun.*" ID="ID_807684122"/>
+<node TEXT="sunw.*" ID="ID_1105139176"/>
+<node TEXT="java.lang.ClassLoader" ID="ID_741693154"/>
+</node>
+<node TEXT="Filter synthetic methods" ID="ID_1716185586">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="Filter static initializers" ID="ID_980758565">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Filter constructors" ID="ID_981731878">
+<icon BUILTIN="unchecked"/>
+</node>
+<node TEXT="Filter simple getters" ID="ID_1740964513">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="Filter simple setters" ID="ID_461317260">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="Step through filters" ID="ID_1469653081">
+<icon BUILTIN="checked"/>
+</node>
+</node>
+</node>
+<node TEXT="Installed JREs" ID="ID_316985802">
+<node TEXT="Search" ID="ID_876921474">
+<node TEXT="/usr/lib/jvm" ID="ID_1154127591"/>
+</node>
+<node TEXT="Default" ID="ID_340980412">
+<node TEXT="java-8-openjdk-amd64" ID="ID_1446398627"/>
+</node>
+<node TEXT="Execution Environments" ID="ID_1880044001">
+<node TEXT="JavaSE-1.6" ID="ID_1915922440">
+<node TEXT="java-6-openjdk-amd64" ID="ID_966836634"/>
+</node>
+<node TEXT="JavaSE-1.7" ID="ID_1928149439">
+<node TEXT="java-7-openjdk-amd64" ID="ID_1876614447"/>
+</node>
+<node TEXT="JavaSE-1.8" ID="ID_978668928">
+<node TEXT="java-8-openjdk-amd64" ID="ID_541392875"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Debug view" ID="ID_743589542">
+<node TEXT="Java" ID="ID_1540653204">
+<node TEXT="Show Qualified Names" ID="ID_159338837">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 <node TEXT="PC-Tom" POSITION="right" ID="ID_675404597"/>
 <node TEXT="dempwr00023" POSITION="right" ID="ID_411280416">
 <node TEXT="Installation" ID="ID_1969918291">
