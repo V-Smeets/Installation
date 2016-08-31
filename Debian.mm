@@ -1270,7 +1270,7 @@
 </node>
 <node TEXT="dhcp" ID="ID_1509804560">
 <node TEXT="/etc/dhcp/dhclient.conf" ID="ID_197607732">
-<node TEXT="interface &quot;enp0s25&quot; {&#xa;        append rfc3442-classless-static-routes  0,                       161,90,190,1;&#xa;        append rfc3442-classless-static-routes  24, 193,103,165, 161,90,190,3;&#xa;}" ID="ID_300219698"/>
+<node TEXT="interface &quot;enp0s25&quot; {&#xa;        append rfc3442-classless-static-routes  0,                             161,90,190,1;&#xa;        append rfc3442-classless-static-routes  28, 193,103,165,160, 161,90,190,3;&#xa;}" ID="ID_300219698"/>
 </node>
 </node>
 <node TEXT="cntlm" ID="ID_532273814">
