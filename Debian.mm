@@ -1270,7 +1270,8 @@
 </node>
 <node TEXT="dhcp" ID="ID_1509804560">
 <node TEXT="/etc/dhcp/dhclient.conf" ID="ID_197607732">
-<node TEXT="interface &quot;enp0s25&quot; {&#xa;        append rfc3442-classless-static-routes  0,                             161,90,190,1;&#xa;        append rfc3442-classless-static-routes  28, 193,103,165,160, 161,90,190,3;&#xa;}" ID="ID_300219698"/>
+<node TEXT="# CN=Subnets,CN=Sites,CN=Configuration,DC=ww930,DC=my-it-solutions,DC=net&#xa;interface &quot;enp0s25&quot; {&#xa;        #append rfc3442-classless-static-routes  0,                             161,90,190,1;&#xa;        append rfc3442-classless-static-routes  28, 193,103,165,160, 161,90,190,3;&#xa;}" ID="ID_300219698"/>
+<node TEXT="interface &quot;enxa0cec809014c&quot; {&#xa;        append rfc3442-classless-static-routes 0,                              192,168,8,1;&#xa;}" ID="ID_717224321"/>
 </node>
 </node>
 <node TEXT="cntlm" ID="ID_532273814">
@@ -1337,6 +1338,11 @@
 <node TEXT="atos" ID="ID_343778531">
 <node TEXT="enp0s25" ID="ID_575621935">
 <node TEXT="dhcp,tcpflags" ID="ID_1461384911"/>
+</node>
+</node>
+<node TEXT="world" ID="ID_418123074">
+<node TEXT="enxa0cec809014c" ID="ID_1111605439">
+<node TEXT="dhcp,tcpflags" ID="ID_1746531889"/>
 </node>
 </node>
 </node>
@@ -1413,6 +1419,11 @@
 <node TEXT="atos" ID="ID_741585355">
 <node TEXT="enp0s25" ID="ID_1535761013">
 <node TEXT="tcpflags" ID="ID_812411514"/>
+</node>
+</node>
+<node TEXT="world" ID="ID_171263352">
+<node TEXT="enxa0cec809014c" ID="ID_640311642">
+<node TEXT="tcpflags" ID="ID_331377784"/>
 </node>
 </node>
 </node>
