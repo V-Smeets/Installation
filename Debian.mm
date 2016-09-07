@@ -1298,6 +1298,7 @@
 </node>
 </node>
 <node TEXT="apt" ID="ID_181570920">
+<node TEXT="dpkg --add-architecture i386" ID="ID_589501595"/>
 <node TEXT="/etc/apt/apt.conf.d/02proxy" ID="ID_521464583">
 <node TEXT="Acquire::http::Pipeline-Depth    0;" ID="ID_1653859507"/>
 </node>
