@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# git filter-branch --tree-filter '$GIT_DIR/../cleanup-mm'
+#
+find . -name \*.mm -print0 | \
+xargs -0 sed -i \
+	-e 's/ CREATED="[0-9]*"//g' \
+	-e 's/ MODIFIED="[0-9]*"//g' \
+	-e 's/ FOLDED="[a-z]*"//g' \
+	"$@"
