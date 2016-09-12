@@ -232,13 +232,20 @@
 <node TEXT="mkdir -p ~/src" ID="ID_1723866192"/>
 <node TEXT="git clone https://github.com/V-Smeets/profile.git ~/src/profile" ID="ID_1307559123"/>
 <node TEXT="ln --symbolic --force src/profile/.profile ." ID="ID_799760412"/>
-<node TEXT="apt-reset" ID="ID_692528348"/>
+<node TEXT="apt-reset" ID="ID_692528348">
+<node TEXT="aiccu" ID="ID_1533546666"/>
+<node TEXT="apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_303545824"/>
+<node TEXT="exim4" ID="ID_201126859"/>
+<node TEXT="mumble-server" ID="ID_1052845946"/>
+<node TEXT="shorewall" ID="ID_739921708"/>
+<node TEXT="radvd" ID="ID_1810897072"/>
+<node TEXT="shorewall6" ID="ID_1194409487"/>
+<node TEXT="unattended-upgrades" ID="ID_30418557"/>
+</node>
 </node>
 <node TEXT="Shorewall" ID="ID_1933272742">
-<node TEXT="apt-get" ID="ID_1834905097">
-<node TEXT="install" ID="ID_374174061">
-<node TEXT="shorewall" ID="ID_601656638"/>
-</node>
+<node TEXT="apt-reset" ID="ID_1834905097">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_739921708" STARTINCLINATION="60;0;" ENDINCLINATION="60;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="Bug #773392" ID="ID_949966487">
 <node TEXT="/etc/init.d/shorewall" ID="ID_1049517506">
@@ -246,6 +253,9 @@
 </node>
 <node TEXT="update-rc.d shorewall remove" ID="ID_564267949"/>
 <node TEXT="update-rc.d shorewall defaults" ID="ID_363559664"/>
+</node>
+<node TEXT="macro.Mumble" ID="ID_1934385845">
+<node TEXT="#&#xa;# Shorewall version 4 - Mumble Macro&#xa;#&#xa;# /usr/share/shorewall/macro.Mumble&#xa;#&#xa;# This macro handles Mumble traffic.&#xa;#&#xa;###############################################################################&#xa;?FORMAT 2&#xa;###############################################################################&#xa;#ACTION SOURCE DEST PROTO DEST SOURCE ORIGIN RATE USER/&#xa;# PORT(S) PORT(S) DEST LIMIT GROUP&#xa;PARAM - - tcp 64738&#xa;PARAM - - udp 64738" ID="ID_288542004"/>
 </node>
 <node TEXT="zones" ID="ID_214804655">
 <node TEXT="fw" ID="ID_1377756685">
@@ -325,6 +335,36 @@
 </node>
 <node TEXT="rules" ID="ID_1354190557">
 <node TEXT="?SECTION NEW" ID="ID_1589109999">
+<node TEXT="HTTP(ACCEPT)" ID="ID_407037506">
+<node TEXT="local" ID="ID_1791427316">
+<node TEXT="$FW" ID="ID_864835315"/>
+</node>
+</node>
+<node TEXT="HTTP(ACCEPT)" ID="ID_1108244148">
+<node TEXT="world" ID="ID_649847399">
+<node TEXT="$FW" ID="ID_1090160191"/>
+</node>
+</node>
+<node TEXT="HTTPS(ACCEPT)" ID="ID_1662935035">
+<node TEXT="local" ID="ID_1055304920">
+<node TEXT="$FW" ID="ID_778091007"/>
+</node>
+</node>
+<node TEXT="HTTPS(ACCEPT)" ID="ID_232861221">
+<node TEXT="world" ID="ID_1567893266">
+<node TEXT="$FW" ID="ID_1492404181"/>
+</node>
+</node>
+<node TEXT="Mumble(ACCEPT)" ID="ID_886077479">
+<node TEXT="local" ID="ID_1373684218">
+<node TEXT="$FW" ID="ID_1533868219"/>
+</node>
+</node>
+<node TEXT="Mumble(ACCEPT)" ID="ID_991155173">
+<node TEXT="world" ID="ID_471981571">
+<node TEXT="$FW" ID="ID_1533771200"/>
+</node>
+</node>
 <node TEXT="SSH(ACCEPT)" ID="ID_822370814">
 <node TEXT="local" ID="ID_1812230403">
 <node TEXT="$FW" ID="ID_810811214"/>
@@ -337,10 +377,8 @@
 </node>
 </node>
 <node TEXT="Shorewall6" ID="ID_1572706462">
-<node TEXT="apt-get" ID="ID_512984956">
-<node TEXT="install" ID="ID_1194887820">
-<node TEXT="shorewall6" ID="ID_1347751350"/>
-</node>
+<node TEXT="apt-reset" ID="ID_512984956">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1194409487" STARTINCLINATION="59;0;" ENDINCLINATION="59;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="Bug #773392" ID="ID_1426093956">
 <node TEXT="/etc/init.d/shorewall6" ID="ID_1374446322">
@@ -348,6 +386,10 @@
 </node>
 <node TEXT="update-rc.d shorewall6 remove" ID="ID_13379901"/>
 <node TEXT="update-rc.d shorewall6 defaults" ID="ID_1227756401"/>
+</node>
+<node TEXT="ln -s ../shorewall/macro.Mumble ." ID="ID_1892757355"/>
+<node TEXT="shorewall6.conf" ID="ID_13673197">
+<node TEXT="IP_FORWARDING=Keep" ID="ID_28097545"/>
 </node>
 <node TEXT="zones" ID="ID_1834294499">
 <node TEXT="fw" ID="ID_168662855">
@@ -448,6 +490,36 @@
 <node TEXT="$FW" ID="ID_78518630"/>
 </node>
 </node>
+<node TEXT="HTTP(ACCEPT)" ID="ID_1088635846">
+<node TEXT="local" ID="ID_152715210">
+<node TEXT="$FW" ID="ID_286012640"/>
+</node>
+</node>
+<node TEXT="HTTP(ACCEPT)" ID="ID_94514474">
+<node TEXT="world" ID="ID_431213193">
+<node TEXT="$FW" ID="ID_1964199909"/>
+</node>
+</node>
+<node TEXT="HTTPS(ACCEPT)" ID="ID_596941630">
+<node TEXT="local" ID="ID_1606888588">
+<node TEXT="$FW" ID="ID_459719367"/>
+</node>
+</node>
+<node TEXT="HTTPS(ACCEPT)" ID="ID_256436937">
+<node TEXT="world" ID="ID_51095333">
+<node TEXT="$FW" ID="ID_55069383"/>
+</node>
+</node>
+<node TEXT="Mumble(ACCEPT)" ID="ID_1408684634">
+<node TEXT="local" ID="ID_1366278687">
+<node TEXT="$FW" ID="ID_541105898"/>
+</node>
+</node>
+<node TEXT="Mumble(ACCEPT)" ID="ID_1411446342">
+<node TEXT="world" ID="ID_1274900156">
+<node TEXT="$FW" ID="ID_1908204776"/>
+</node>
+</node>
 <node TEXT="SSH(ACCEPT)" ID="ID_1861329346">
 <node TEXT="local" ID="ID_1418884032">
 <node TEXT="$FW" ID="ID_267644996"/>
@@ -464,10 +536,8 @@
 </node>
 <node TEXT="exim4" ID="ID_1380953093">
 <node TEXT="https://wiki.debian.org/GmailAndExim4" ID="ID_1386941183"/>
-<node TEXT="apt-get" ID="ID_1821346417">
-<node TEXT="install" ID="ID_666509836">
-<node TEXT="exim4" ID="ID_123412260"/>
-</node>
+<node TEXT="apt-reset" ID="ID_1821346417">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_201126859" STARTINCLINATION="153;0;" ENDINCLINATION="153;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="dpkg-reconfigure exim4-config" ID="ID_1900733951">
 <node TEXT="mail sent by smarthost; received via SMTP or fetchmail" ID="ID_359138867"/>
@@ -512,10 +582,8 @@
 <node TEXT="service exim4 restart" ID="ID_84820020"/>
 </node>
 <node TEXT="unattended-upgrades" ID="ID_951481947">
-<node TEXT="apt-get" ID="ID_275351867">
-<node TEXT="install" ID="ID_894404725">
-<node TEXT="unattended-upgrades" ID="ID_1329582276"/>
-</node>
+<node TEXT="apt-reset" ID="ID_275351867">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_30418557" STARTINCLINATION="113;0;" ENDINCLINATION="113;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="/etc/apt/apt.conf.d/50unattended-upgrades" ID="ID_917954420">
 <node TEXT="Unattended-Upgrade::Origins-Pattern" ID="ID_1963067537">
@@ -533,10 +601,8 @@
 </node>
 </node>
 <node TEXT="aiccu" ID="ID_1818374816">
-<node TEXT="apt-get" ID="ID_690270369">
-<node TEXT="install" ID="ID_912976778">
-<node TEXT="aiccu" ID="ID_50775768"/>
-</node>
+<node TEXT="apt-reset" ID="ID_690270369">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1533546666" STARTINCLINATION="214;0;" ENDINCLINATION="214;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="sudo dpkg-reconfigure aiccu" ID="ID_1495132264">
 <node TEXT="Aiccu username:" ID="ID_987862994">
@@ -548,68 +614,32 @@
 </node>
 <node TEXT="shorewall" ID="ID_935729280">
 <node TEXT="zones" ID="ID_12239795">
-<node TEXT="sixxs:world" ID="ID_443071033">
-<node TEXT="ipv4" ID="ID_958691849"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_12028892" STARTINCLINATION="510;0;" ENDINCLINATION="510;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="interfaces" ID="ID_384246404">
-<node TEXT="world" ID="ID_116973802">
-<node TEXT="sixxs" ID="ID_6072775">
-<node TEXT="tcpflags" ID="ID_1965437581"/>
-</node>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_465079525" STARTINCLINATION="459;0;" ENDINCLINATION="459;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="policy" ID="ID_410278102">
-<node TEXT="$FW" ID="ID_8374412">
-<node TEXT="sixxs" ID="ID_997037446">
-<node TEXT="ACCEPT" ID="ID_1626902360"/>
-</node>
-</node>
-<node TEXT="sixxs" ID="ID_1515067716">
-<node TEXT="$FW" ID="ID_1416803224">
-<node TEXT="REJECT" ID="ID_622298426">
-<node TEXT="info" ID="ID_1212091222"/>
-</node>
-</node>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_580195660" STARTINCLINATION="419;0;" ENDINCLINATION="419;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_770912884" STARTINCLINATION="340;0;" ENDINCLINATION="340;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 <node TEXT="shorewall6" ID="ID_432864727">
 <node TEXT="zones" ID="ID_6747027">
-<node TEXT="sixxs:world" ID="ID_1423374488">
-<node TEXT="ipv6" ID="ID_868195459"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1240171048" STARTINCLINATION="667;0;" ENDINCLINATION="667;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="interfaces" ID="ID_945245672">
-<node TEXT="world" ID="ID_270036810">
-<node TEXT="sixxs" ID="ID_956782753">
-<node TEXT="tcpflags" ID="ID_549284239"/>
-</node>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_866172008" STARTINCLINATION="616;0;" ENDINCLINATION="616;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="hosts" ID="ID_1909317904">
-<node TEXT="sixxs" ID="ID_914008364">
-<node TEXT="sixxs:&lt;2001:1af8:fe00:0499::1/128&gt;" ID="ID_238002320"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_524622087" STARTINCLINATION="566;0;" ENDINCLINATION="566;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="policy" ID="ID_895973881">
-<node TEXT="$FW" ID="ID_997968884">
-<node TEXT="sixxs" ID="ID_1565461465">
-<node TEXT="ACCEPT" ID="ID_1449519078"/>
-</node>
-</node>
-<node TEXT="sixxs" ID="ID_1422138772">
-<node TEXT="$FW" ID="ID_415930458">
-<node TEXT="REJECT" ID="ID_471665669">
-<node TEXT="info" ID="ID_1832598579"/>
-</node>
-</node>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_188964497" STARTINCLINATION="553;0;" ENDINCLINATION="553;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1114122156" STARTINCLINATION="424;0;" ENDINCLINATION="424;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="rules" ID="ID_510597050">
-<node TEXT="?SECTION NEW" ID="ID_1531267610">
-<node TEXT="Ping(ACCEPT) sixxs $FW" ID="ID_493721193"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_55619442" STARTINCLINATION="391;0;" ENDINCLINATION="391;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 <node TEXT="/etc/cron.hourly/aiccu-restart" ID="ID_1478215337">
@@ -618,9 +648,7 @@
 </node>
 <node TEXT="radvd" ID="ID_1774051343">
 <node TEXT="apt-get" ID="ID_1992310622">
-<node TEXT="install" ID="ID_416942324">
-<node TEXT="radvd" ID="ID_1633448224"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1810897072" STARTINCLINATION="200;0;" ENDINCLINATION="200;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="/etc/aiccu.conf" ID="ID_253011220">
 <node TEXT="setupscript /etc/aiccu-subnets.sh" ID="ID_1860583544"/>
@@ -633,24 +661,14 @@
 </node>
 <node TEXT="shorewall6" ID="ID_837213100">
 <node TEXT="shorewall6.conf" ID="ID_1965878763">
-<node TEXT="IP_FORWARDING=Keep" ID="ID_1455635713"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_28097545" STARTINCLINATION="756;0;" ENDINCLINATION="756;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="hosts" ID="ID_981394282">
-<node TEXT="local" ID="ID_1997394331">
-<node TEXT="sixxs:&lt;2001:1af8:fe00:8499::/64&gt;" ID="ID_1354990791"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1556684765" STARTINCLINATION="581;0;" ENDINCLINATION="581;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="policy" ID="ID_1158920546">
-<node TEXT="local" ID="ID_1652760147">
-<node TEXT="sixxs" ID="ID_1199964714">
-<node TEXT="ACCEPT" ID="ID_744087624"/>
-</node>
-</node>
-<node TEXT="local" ID="ID_109333668">
-<node TEXT="world" ID="ID_1543751137">
-<node TEXT="ACCEPT" ID="ID_918755159"/>
-</node>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1153954733" STARTINCLINATION="493;0;" ENDINCLINATION="493;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_665807594" STARTINCLINATION="468;0;" ENDINCLINATION="468;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 <node TEXT="/etc/radvd.conf" ID="ID_526046806">
@@ -659,9 +677,7 @@
 </node>
 <node TEXT="apache2" ID="ID_1568583863">
 <node TEXT="apt-get" ID="ID_206454463">
-<node TEXT="install" ID="ID_1332408969">
-<node TEXT="apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_1254103460"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_303545824" STARTINCLINATION="1031;0;" ENDINCLINATION="1031;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="a2enmod ssl" ID="ID_21753644"/>
 <node TEXT="a2ensite default-ssl" ID="ID_1431214076"/>
@@ -694,47 +710,33 @@
 <node TEXT="shorewall" ID="ID_324634370">
 <node TEXT="rules" ID="ID_1416883608">
 <node TEXT="?SECTION NEW" ID="ID_1988158278">
-<node TEXT="HTTP(ACCEPT) local $FW" ID="ID_1788256892"/>
-<node TEXT="HTTP(ACCEPT) world $FW" ID="ID_650146305"/>
-<node TEXT="HTTPS(ACCEPT) local $FW" ID="ID_1934052868"/>
-<node TEXT="HTTPS(ACCEPT) world $FW" ID="ID_679485996"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_407037506" STARTINCLINATION="403;0;" ENDINCLINATION="403;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1108244148" STARTINCLINATION="383;0;" ENDINCLINATION="383;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1662935035" STARTINCLINATION="365;0;" ENDINCLINATION="365;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_232861221" STARTINCLINATION="346;0;" ENDINCLINATION="346;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 </node>
 <node TEXT="shorewall6" ID="ID_1008662722">
 <node TEXT="rules" ID="ID_1149711872">
 <node TEXT="?SECTION NEW" ID="ID_290928744">
-<node TEXT="HTTP(ACCEPT) local $FW" ID="ID_1580731532"/>
-<node TEXT="HTTP(ACCEPT) world $FW" ID="ID_1843351263"/>
-<node TEXT="HTTPS(ACCEPT) local $FW" ID="ID_671403592"/>
-<node TEXT="HTTPS(ACCEPT) world $FW" ID="ID_1018781058"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1088635846" STARTINCLINATION="436;0;" ENDINCLINATION="436;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_94514474" STARTINCLINATION="411;0;" ENDINCLINATION="411;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_596941630" STARTINCLINATION="387;0;" ENDINCLINATION="387;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_256436937" STARTINCLINATION="363;0;" ENDINCLINATION="363;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 </node>
 <node TEXT="ZyXEL" ID="ID_1251462701">
 <node TEXT="Port Forwarding" ID="ID_156539220">
-<node TEXT="HTTP" ID="ID_1978267741">
-<node TEXT="192.168.1.2" ID="ID_295234279">
-<node TEXT="80..80 =&gt; 80..80" ID="ID_1922926543">
-<node TEXT="TCP" ID="ID_1052259563"/>
-</node>
-</node>
-</node>
-<node TEXT="HTTPS" ID="ID_383652286">
-<node TEXT="192.168.1.2" ID="ID_463704868">
-<node TEXT="443..443 =&gt; 443..443" ID="ID_1688615457">
-<node TEXT="TCP" ID="ID_1188413749"/>
-</node>
-</node>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1826474850" STARTINCLINATION="777;0;" ENDINCLINATION="777;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_910712448" STARTINCLINATION="751;0;" ENDINCLINATION="751;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 </node>
 <node TEXT="mumble" ID="ID_1022216434">
-<node TEXT="apt-get" ID="ID_924158987">
-<node TEXT="install" ID="ID_978139317">
-<node TEXT="mumble-server" ID="ID_931866168"/>
-</node>
+<node TEXT="apt-reset" ID="ID_924158987">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1052845946" STARTINCLINATION="290;0;" ENDINCLINATION="290;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="/etc/mumble-server.ini" ID="ID_1547459396">
 <node TEXT="serverpassword=****" ID="ID_164784719"/>
@@ -751,34 +753,20 @@
 </node>
 </node>
 <node TEXT="shorewall" ID="ID_583050732">
-<node TEXT="/etc/shorewall/macro.Mumble" ID="ID_1400057549">
-<node TEXT="#&#xa;# Shorewall version 4 - Mumble Macro&#xa;#&#xa;# /usr/share/shorewall/macro.Mumble&#xa;#&#xa;# This macro handles Mumble traffic.&#xa;#&#xa;###############################################################################&#xa;?FORMAT 2&#xa;###############################################################################&#xa;#ACTION SOURCE DEST PROTO DEST SOURCE ORIGIN RATE USER/&#xa;# PORT(S) PORT(S) DEST LIMIT GROUP&#xa;PARAM - - tcp 64738&#xa;PARAM - - udp 64738" ID="ID_761702724"/>
-</node>
-<node TEXT="rules" ID="ID_1520066459">
-<node TEXT="?SECTION NEW" ID="ID_501481862">
-<node TEXT="Mumble(ACCEPT) local $FW" ID="ID_356839232"/>
-<node TEXT="Mumble(ACCEPT) world $FW" ID="ID_925084951"/>
-</node>
+<node TEXT="rules" ID="ID_501481862">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_886077479" STARTINCLINATION="368;0;" ENDINCLINATION="368;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_991155173" STARTINCLINATION="344;0;" ENDINCLINATION="344;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 <node TEXT="shorewall6" ID="ID_344121000">
-<node TEXT="ln -s ../shorewall/macro.Mumble ." ID="ID_645276051"/>
 <node TEXT="rules" ID="ID_223933771">
-<node TEXT="?SECTION NEW" ID="ID_562579073">
-<node TEXT="Mumble(ACCEPT) local $FW" ID="ID_1854835374"/>
-<node TEXT="Mumble(ACCEPT) world $FW" ID="ID_1880701855"/>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1408684634" STARTINCLINATION="428;0;" ENDINCLINATION="428;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1411446342" STARTINCLINATION="405;0;" ENDINCLINATION="405;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 <node TEXT="ZyXEL" ID="ID_78354548">
 <node TEXT="Port Forwarding" ID="ID_21916020">
-<node TEXT="Mumble" ID="ID_1336786627">
-<node TEXT="192.168.1.2" ID="ID_1185499824">
-<node TEXT="64738..64738 =&gt; 64738..64738" ID="ID_222456124">
-<node TEXT="TCP/UDP" ID="ID_656575818"/>
-</node>
-</node>
-</node>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1568901740" STARTINCLINATION="629;0;" ENDINCLINATION="629;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 </node>
