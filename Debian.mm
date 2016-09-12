@@ -232,11 +232,13 @@
 <node TEXT="mkdir -p ~/src" ID="ID_1723866192"/>
 <node TEXT="git clone https://github.com/V-Smeets/profile.git ~/src/profile" ID="ID_1307559123"/>
 <node TEXT="ln --symbolic --force src/profile/.profile ." ID="ID_799760412"/>
-<node TEXT="reset_aptitude" ID="ID_692528348"/>
+<node TEXT="apt-reset" ID="ID_692528348"/>
 </node>
 <node TEXT="Shorewall" ID="ID_1933272742">
-<node TEXT="reset_aptitude" ID="ID_1834905097">
-<node TEXT="name arch1_include shorewall" ID="ID_601656638"/>
+<node TEXT="apt-get" ID="ID_1834905097">
+<node TEXT="install" ID="ID_374174061">
+<node TEXT="shorewall" ID="ID_601656638"/>
+</node>
 </node>
 <node TEXT="Bug #773392" ID="ID_949966487">
 <node TEXT="/etc/init.d/shorewall" ID="ID_1049517506">
@@ -335,8 +337,10 @@
 </node>
 </node>
 <node TEXT="Shorewall6" ID="ID_1572706462">
-<node TEXT="reset_aptitude" ID="ID_512984956">
-<node TEXT="name arch1_include shorewall6" ID="ID_1347751350"/>
+<node TEXT="apt-get" ID="ID_512984956">
+<node TEXT="install" ID="ID_1194887820">
+<node TEXT="shorewall6" ID="ID_1347751350"/>
+</node>
 </node>
 <node TEXT="Bug #773392" ID="ID_1426093956">
 <node TEXT="/etc/init.d/shorewall6" ID="ID_1374446322">
@@ -456,15 +460,14 @@
 </node>
 </node>
 <node TEXT="ntp" ID="ID_976175558">
-<node TEXT="reset_aptitude" ID="ID_1261809251">
-<node TEXT="name arch1_exclude ntp" ID="ID_1582281810"/>
-</node>
 <node TEXT="timedatectl set-ntp true" ID="ID_1630790881"/>
 </node>
 <node TEXT="exim4" ID="ID_1380953093">
 <node TEXT="https://wiki.debian.org/GmailAndExim4" ID="ID_1386941183"/>
-<node TEXT="reset_aptitude" ID="ID_1821346417">
-<node TEXT="name arch1_include exim4" ID="ID_123412260"/>
+<node TEXT="apt-get" ID="ID_1821346417">
+<node TEXT="install" ID="ID_666509836">
+<node TEXT="exim4" ID="ID_123412260"/>
+</node>
 </node>
 <node TEXT="dpkg-reconfigure exim4-config" ID="ID_1900733951">
 <node TEXT="mail sent by smarthost; received via SMTP or fetchmail" ID="ID_359138867"/>
@@ -509,8 +512,10 @@
 <node TEXT="service exim4 restart" ID="ID_84820020"/>
 </node>
 <node TEXT="unattended-upgrades" ID="ID_951481947">
-<node TEXT="reset_aptitude" ID="ID_275351867">
-<node TEXT="name arch1_include unattended-upgrades" ID="ID_1329582276"/>
+<node TEXT="apt-get" ID="ID_275351867">
+<node TEXT="install" ID="ID_894404725">
+<node TEXT="unattended-upgrades" ID="ID_1329582276"/>
+</node>
 </node>
 <node TEXT="/etc/apt/apt.conf.d/50unattended-upgrades" ID="ID_917954420">
 <node TEXT="Unattended-Upgrade::Origins-Pattern" ID="ID_1963067537">
@@ -528,8 +533,10 @@
 </node>
 </node>
 <node TEXT="aiccu" ID="ID_1818374816">
-<node TEXT="reset_aptitude" ID="ID_690270369">
-<node TEXT="name arch1_include aiccu" ID="ID_50775768"/>
+<node TEXT="apt-get" ID="ID_690270369">
+<node TEXT="install" ID="ID_912976778">
+<node TEXT="aiccu" ID="ID_50775768"/>
+</node>
 </node>
 <node TEXT="sudo dpkg-reconfigure aiccu" ID="ID_1495132264">
 <node TEXT="Aiccu username:" ID="ID_987862994">
@@ -610,8 +617,10 @@
 </node>
 </node>
 <node TEXT="radvd" ID="ID_1774051343">
-<node TEXT="reset_aptitude" ID="ID_1992310622">
-<node TEXT="name arch1_include radvd" ID="ID_1633448224"/>
+<node TEXT="apt-get" ID="ID_1992310622">
+<node TEXT="install" ID="ID_416942324">
+<node TEXT="radvd" ID="ID_1633448224"/>
+</node>
 </node>
 <node TEXT="/etc/aiccu.conf" ID="ID_253011220">
 <node TEXT="setupscript /etc/aiccu-subnets.sh" ID="ID_1860583544"/>
@@ -649,8 +658,10 @@
 </node>
 </node>
 <node TEXT="apache2" ID="ID_1568583863">
-<node TEXT="reset_aptitude" ID="ID_206454463">
-<node TEXT="name arch1_include apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_1254103460"/>
+<node TEXT="apt-get" ID="ID_206454463">
+<node TEXT="install" ID="ID_1332408969">
+<node TEXT="apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_1254103460"/>
+</node>
 </node>
 <node TEXT="a2enmod ssl" ID="ID_21753644"/>
 <node TEXT="a2ensite default-ssl" ID="ID_1431214076"/>
@@ -720,8 +731,10 @@
 </node>
 </node>
 <node TEXT="mumble" ID="ID_1022216434">
-<node TEXT="reset_aptitude" ID="ID_924158987">
-<node TEXT="name arch1_include mumble-server" ID="ID_931866168"/>
+<node TEXT="apt-get" ID="ID_924158987">
+<node TEXT="install" ID="ID_978139317">
+<node TEXT="mumble-server" ID="ID_931866168"/>
+</node>
 </node>
 <node TEXT="/etc/mumble-server.ini" ID="ID_1547459396">
 <node TEXT="serverpassword=****" ID="ID_164784719"/>
