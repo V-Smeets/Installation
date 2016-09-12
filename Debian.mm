@@ -352,6 +352,9 @@
 <node TEXT="world" ID="ID_818059303">
 <node TEXT="ipv6" ID="ID_484686228"/>
 </node>
+<node TEXT="sixxs:world" ID="ID_1240171048">
+<node TEXT="ipv6" ID="ID_528857318"/>
+</node>
 <node TEXT="local:world" ID="ID_1606403578">
 <node TEXT="ipv6" ID="ID_777807470"/>
 </node>
@@ -362,10 +365,21 @@
 <node TEXT="tcpflags" ID="ID_1459732526"/>
 </node>
 </node>
+<node TEXT="world" ID="ID_866172008">
+<node TEXT="sixxs" ID="ID_572935172">
+<node TEXT="tcpflags" ID="ID_1606267722"/>
+</node>
+</node>
 </node>
 <node TEXT="hosts" ID="ID_1336580833">
 <node TEXT="local" ID="ID_877107888">
 <node TEXT="eth0:&lt;fe80::0/64&gt;" ID="ID_76220778"/>
+</node>
+<node TEXT="local" ID="ID_1556684765">
+<node TEXT="sixxs:&lt;2001:1af8:fe00:8499::/64&gt;" ID="ID_1315193802"/>
+</node>
+<node TEXT="sixxs" ID="ID_524622087">
+<node TEXT="sixxs:&lt;2001:1af8:fe00:0499::1/128&gt;" ID="ID_892391568"/>
 </node>
 </node>
 <node TEXT="policy" ID="ID_737325455">
@@ -374,15 +388,37 @@
 <node TEXT="ACCEPT" ID="ID_1765229039"/>
 </node>
 </node>
+<node TEXT="$FW" ID="ID_188964497">
+<node TEXT="sixxs" ID="ID_1787495264">
+<node TEXT="ACCEPT" ID="ID_1470705674"/>
+</node>
+</node>
 <node TEXT="$FW" ID="ID_1347210533">
 <node TEXT="world" ID="ID_785926258">
 <node TEXT="ACCEPT" ID="ID_497189374"/>
+</node>
+</node>
+<node TEXT="local" ID="ID_1153954733">
+<node TEXT="sixxs" ID="ID_1880517159">
+<node TEXT="ACCEPT" ID="ID_1603149086"/>
+</node>
+</node>
+<node TEXT="local" ID="ID_665807594">
+<node TEXT="world" ID="ID_26932822">
+<node TEXT="ACCEPT" ID="ID_515626009"/>
 </node>
 </node>
 <node TEXT="local" ID="ID_1480504778">
 <node TEXT="$FW" ID="ID_1655089642">
 <node TEXT="REJECT" ID="ID_1922460083">
 <node TEXT="info" ID="ID_183705075"/>
+</node>
+</node>
+</node>
+<node TEXT="sixxs" ID="ID_1114122156">
+<node TEXT="$FW" ID="ID_781448970">
+<node TEXT="REJECT" ID="ID_196981013">
+<node TEXT="info" ID="ID_571308407"/>
 </node>
 </node>
 </node>
@@ -403,6 +439,11 @@
 </node>
 <node TEXT="rules" ID="ID_1269463867">
 <node TEXT="?SECTION NEW" ID="ID_805889223">
+<node TEXT="Ping(ACCEPT)" ID="ID_55619442">
+<node TEXT="sixxs" ID="ID_1841053539">
+<node TEXT="$FW" ID="ID_78518630"/>
+</node>
+</node>
 <node TEXT="SSH(ACCEPT)" ID="ID_1861329346">
 <node TEXT="local" ID="ID_1418884032">
 <node TEXT="$FW" ID="ID_267644996"/>
