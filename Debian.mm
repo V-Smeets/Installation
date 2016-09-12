@@ -1,21 +1,26 @@
-<map version="freeplane 1.3.0">
+<map version="freeplane 1.5.9">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Debian" ID="ID_648313087"><hook NAME="MapStyle">
+    <properties fit_to_viewport="false;"/>
 
 <map_styles>
-<stylenode LOCALIZED_TEXT="styles.root_node">
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
-<stylenode LOCALIZED_TEXT="default" MAX_WIDTH="600" COLOR="#000000" STYLE="as_parent">
+<stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
+<font SIZE="24"/>
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
+<stylenode LOCALIZED_TEXT="default" MAX_WIDTH="600.0 px" COLOR="#000000" STYLE="as_parent">
 <font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.attributes">
+<font SIZE="9"/>
+</stylenode>
 <stylenode LOCALIZED_TEXT="defaultstyle.note"/>
 <stylenode LOCALIZED_TEXT="defaultstyle.floating">
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right">
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
 <font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
 </stylenode>
@@ -29,7 +34,7 @@
 <icon BUILTIN="yes"/>
 </stylenode>
 </stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right">
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000">
 <font SIZE="18"/>
 </stylenode>
@@ -247,6 +252,9 @@
 <node TEXT="world" ID="ID_657836071">
 <node TEXT="ipv4" ID="ID_956355802"/>
 </node>
+<node TEXT="sixxs:world" ID="ID_12028892">
+<node TEXT="ipv4" ID="ID_1317648020"/>
+</node>
 <node TEXT="local:world" ID="ID_1794770856">
 <node TEXT="ipv4" ID="ID_975796714"/>
 </node>
@@ -255,6 +263,11 @@
 <node TEXT="world" ID="ID_862281526">
 <node TEXT="eth0" ID="ID_1660872267">
 <node TEXT="dhcp,tcpflags" ID="ID_297239263"/>
+</node>
+</node>
+<node TEXT="world" ID="ID_465079525">
+<node TEXT="sixxs" ID="ID_1295455814">
+<node TEXT="tcpflags" ID="ID_915181315"/>
 </node>
 </node>
 </node>
@@ -269,6 +282,11 @@
 <node TEXT="ACCEPT" ID="ID_1310181900"/>
 </node>
 </node>
+<node TEXT="$FW" ID="ID_580195660">
+<node TEXT="sixxs" ID="ID_310373142">
+<node TEXT="ACCEPT" ID="ID_1990624990"/>
+</node>
+</node>
 <node TEXT="$FW" ID="ID_90595244">
 <node TEXT="world" ID="ID_652759869">
 <node TEXT="ACCEPT" ID="ID_1031995043"/>
@@ -278,6 +296,13 @@
 <node TEXT="$FW" ID="ID_1609773692">
 <node TEXT="REJECT" ID="ID_1181298357">
 <node TEXT="info" ID="ID_1519082033"/>
+</node>
+</node>
+</node>
+<node TEXT="sixxs" ID="ID_770912884">
+<node TEXT="$FW" ID="ID_1515497218">
+<node TEXT="REJECT" ID="ID_364015832">
+<node TEXT="info" ID="ID_369269802"/>
 </node>
 </node>
 </node>
