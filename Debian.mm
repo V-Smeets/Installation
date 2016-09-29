@@ -247,8 +247,8 @@
 <node TEXT="apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth" ID="ID_303545824"/>
 <node TEXT="exim4" ID="ID_201126859"/>
 <node TEXT="shorewall" ID="ID_739921708"/>
-<node TEXT="radvd" ID="ID_1810897072"/>
 <node TEXT="shorewall6" ID="ID_1194409487"/>
+<node TEXT="radvd" ID="ID_1810897072"/>
 <node TEXT="unattended-upgrades" ID="ID_30418557"/>
 </node>
 </node>
