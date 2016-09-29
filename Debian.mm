@@ -57,6 +57,15 @@
 <node TEXT="ZyXEL" POSITION="right" ID="ID_1021636429">
 <node TEXT="Network Setting" ID="ID_1051335803">
 <node TEXT="Home Networking" ID="ID_1237471022">
+<node TEXT="LAN Setup" ID="ID_280778747">
+<node TEXT="Interface Group" ID="ID_1694317458">
+<node TEXT="IPTV_group" ID="ID_1451331428">
+<node TEXT="DHCP" ID="ID_1080878907">
+<node TEXT="Disable" ID="ID_139416802"/>
+</node>
+</node>
+</node>
+</node>
 <node TEXT="Static DHCP" ID="ID_1669742618">
 <node TEXT="RaspberryPi" ID="ID_221899758">
 <node TEXT="B8:27:EB:39:83:7F" ID="ID_994755338">
