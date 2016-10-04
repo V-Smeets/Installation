@@ -1267,9 +1267,15 @@
 <node TEXT="/etc/apt/apt.conf.d/02proxy" ID="ID_521464583">
 <node TEXT="Acquire::http::Pipeline-Depth    0;" ID="ID_1653859507"/>
 </node>
+<node TEXT="/etc/apt/sources.list" ID="ID_1657636807">
+<node TEXT="deb http://httpredir.debian.org/debian/ testing main non-free contrib" ID="ID_186325429"/>
+<node TEXT="deb-src http://httpredir.debian.org/debian/ testing main non-free contrib" ID="ID_369849873"/>
+<node TEXT="deb http://security.debian.org/debian-security testing/updates main contrib non-free" ID="ID_1857925137"/>
+<node TEXT="deb-src http://security.debian.org/debian-security testing/updates main contrib non-free" ID="ID_531478473"/>
+</node>
 <node TEXT="/etc/apt/sources.list.d/experimental.list" ID="ID_840272588">
-<node TEXT="deb http://ftp.de.debian.org/debian/ experimental main non-free contrib" ID="ID_531601851"/>
-<node TEXT="deb-src http://ftp.de.debian.org/debian/ experimental main non-free contrib" ID="ID_82783064"/>
+<node TEXT="deb http://httpredir.debian.org/debian/ experimental main non-free contrib" ID="ID_531601851"/>
+<node TEXT="deb-src http://httpredir.debian.org/debian/ experimental main non-free contrib" ID="ID_82783064"/>
 </node>
 <node TEXT="/etc/apt/preferences.d/experimental" ID="ID_580701482">
 <node TEXT="Package: *&#xa;Pin: release o=Debian,a=experimental&#xa;Pin-Priority: -1" ID="ID_1846724044"/>
