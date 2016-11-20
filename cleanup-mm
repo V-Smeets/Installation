@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# git filter-branch --tree-filter '$GIT_DIR/../cleanup-mm'
+# git filter-branch --tree-filter '$GIT_DIR/../cleanup-mm' --force master..HEAD
 #
 find . -name \*.mm -print | \
 while read filename
