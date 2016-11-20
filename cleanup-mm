@@ -1,10 +1,40 @@
-#!/bin/sh
+#!/bin/sh -e
 #
 # git filter-branch --tree-filter '$GIT_DIR/../cleanup-mm'
 #
-find . -name \*.mm -print0 | \
-xargs -0 sed -i \
-	-e 's/ CREATED="[0-9]*"//g' \
-	-e 's/ MODIFIED="[0-9]*"//g' \
-	-e 's/ FOLDED="[a-z]*"//g' \
-	"$@"
+find . -name \*.mm -print | \
+while read filename
+do
+	cp -a "${filename}" "${filename}.orig"
+	sed \
+		-e 's/ CREATED="[0-9]*"//g' \
+		-e 's/ MODIFIED="[0-9]*"//g' \
+		-e 's/ FOLDED="[a-z]*"//g' \
+		"${filename}" \
+		> "${filename}.new"
+	mv "${filename}.new" "${filename}"
+	awk -- '
+
+		/^<arrowlink / {
+			command = "LC_ALL=C sort"
+			print $0 |& command
+			next
+		}
+
+		command != "" && /^<\/node>/ {
+			close(command, "to")
+			while ((command |& getline line) > 0)
+				print line
+			close(command)
+			command = ""
+		}
+
+		{
+			print $0
+		}
+
+		' "${filename}" \
+		> "${filename}.new"
+	mv "${filename}.new" "${filename}"
+	rm -f "${filename}.orig"
+done
