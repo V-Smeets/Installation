@@ -877,6 +877,18 @@
 </node>
 </node>
 </node>
+<node TEXT="Scala" ID="ID_1831370590">
+<node TEXT="Compiler" ID="ID_309579474">
+<node TEXT="Standard" ID="ID_1177433264">
+<node TEXT="deprication" ID="ID_499437664">
+<icon BUILTIN="checked"/>
+</node>
+<node TEXT="feature" ID="ID_1130163293">
+<icon BUILTIN="checked"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 </node>
 <node TEXT="Debug view" ID="ID_743589542">
