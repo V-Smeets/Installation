@@ -77,6 +77,11 @@
 <node TEXT="192.168.1.3" ID="ID_361787286"/>
 </node>
 </node>
+<node TEXT="RaspberryTom" ID="ID_1976184441">
+<node TEXT="B8:27:EB:BB:D9:F1" ID="ID_293186182">
+<node TEXT="192.168.1.4" ID="ID_68656766"/>
+</node>
+</node>
 <node TEXT="HP2D93F8" ID="ID_1306508137">
 <node TEXT="D4:85:64:2D:93:F8" ID="ID_1879488096">
 <node TEXT="192.168.1.100" ID="ID_902810743"/>
@@ -147,6 +152,9 @@
 </node>
 <node TEXT="osmc.Home" ID="ID_1900628236">
 <node TEXT="192.168.1.3" ID="ID_757589178"/>
+</node>
+<node TEXT="RaspberryTom.Home" ID="ID_1911656648">
+<node TEXT="192.168.1.4" ID="ID_1461043944"/>
 </node>
 <node TEXT="HP2D93F8.Home" ID="ID_1549460615">
 <node TEXT="192.168.1.100" ID="ID_1437217201"/>
