@@ -1580,5 +1580,118 @@
 </node>
 </node>
 </node>
+<node TEXT="Stamboom" POSITION="right" ID="ID_1351152560">
+<node TEXT="Install" ID="ID_1521302991">
+<node TEXT="Language" ID="ID_907168392">
+<node TEXT="English" ID="ID_1309109800"/>
+</node>
+<node TEXT="Country, territory or area" ID="ID_354881173">
+<node TEXT="Netherlands" ID="ID_2697611"/>
+</node>
+<node TEXT="Country to base default locale settings on" ID="ID_1861031677">
+<node TEXT="United States" ID="ID_1071241029"/>
+</node>
+<node TEXT="Keymap to use" ID="ID_91395682">
+<node TEXT="American English" ID="ID_167508650"/>
+</node>
+<node TEXT="Primary network interface" ID="ID_1106175938">
+<node TEXT="eth0" ID="ID_857903096"/>
+</node>
+<node TEXT="Hostname" ID="ID_1113928996">
+<node TEXT="Stamboom" ID="ID_1449857976"/>
+</node>
+<node TEXT="Domain name" ID="ID_1813659480">
+<node TEXT="Home" ID="ID_865701229"/>
+</node>
+<node TEXT="Root password" ID="ID_478212874">
+<node TEXT="********" ID="ID_920844445"/>
+</node>
+<node TEXT="Full name for the new user" ID="ID_101565295">
+<node TEXT="Melanie Auer" ID="ID_450709960"/>
+</node>
+<node TEXT="Username for your account" ID="ID_1032814550">
+<node TEXT="melanie" ID="ID_32249040"/>
+</node>
+<node TEXT="Choose a password for the new user" ID="ID_1855701673">
+<node TEXT="********" ID="ID_301194949"/>
+</node>
+<node TEXT="Partitioning method" ID="ID_603930822">
+<node TEXT="Guided - use entire disk and set up LVM" ID="ID_462535953"/>
+</node>
+<node TEXT="Select disk to partition" ID="ID_699383584">
+<node TEXT="SCSI1 (sda) 320.1 GB" ID="ID_278475450"/>
+</node>
+<node TEXT="Partition scheme" ID="ID_115361969">
+<node TEXT="Separate /home partition" ID="ID_683577220">
+<node TEXT="sda1" ID="ID_1238669091">
+<node TEXT="256MB" ID="ID_1493517396">
+<node TEXT="/boot" ID="ID_1674291146"/>
+</node>
+</node>
+<node TEXT="sda5" ID="ID_538077401">
+<node TEXT="320GB" ID="ID_1045865123">
+<node TEXT="ivm" ID="ID_443824168"/>
+</node>
+</node>
+<node TEXT="lvm" ID="ID_83989039">
+<node TEXT="root" ID="ID_637009015">
+<node TEXT="10GB" ID="ID_568539411">
+<node TEXT="/" ID="ID_632514040"/>
+</node>
+</node>
+<node TEXT="swap_1" ID="ID_416423327">
+<node TEXT="8GB" ID="ID_1522763077">
+<node TEXT="swap" ID="ID_916943720"/>
+</node>
+</node>
+<node TEXT="home" ID="ID_1989077065">
+<node TEXT="300GB" ID="ID_923760917">
+<node TEXT="/home" ID="ID_1420938304"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="Debian archive mirror country" ID="ID_732793612">
+<node TEXT="Netherlands" ID="ID_697768639"/>
+</node>
+<node TEXT="Debian archive mirror" ID="ID_816892077">
+<node TEXT="httpredir.debian.org" ID="ID_1286758431"/>
+</node>
+<node TEXT="HTTP proxy information" ID="ID_1993804638"/>
+<node TEXT="Participate in the package usage survey?" ID="ID_133148628">
+<node TEXT="Yes" ID="ID_458182559"/>
+</node>
+<node TEXT="Choose software to install" ID="ID_1301694166">
+<node TEXT="Debian desktop environment" ID="ID_1923345843">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="... GNOME" ID="ID_1921115898">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="... KDE" ID="ID_287546062">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="print server" ID="ID_1549640847">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="SSH server" ID="ID_348440730">
+<icon BUILTIN="button_ok"/>
+</node>
+<node TEXT="standard system utilities" ID="ID_78430656">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node TEXT="Default display manager" ID="ID_313683202">
+<node TEXT="kdm" ID="ID_1849766533"/>
+</node>
+<node TEXT="Install the GRUB boot loader to the master boot record?" ID="ID_1686434333">
+<node TEXT="Yes" ID="ID_1183030768"/>
+</node>
+<node TEXT="Device for boot loader installation" ID="ID_543615259">
+<node TEXT="/dev/sda" ID="ID_531414678"/>
+</node>
+</node>
+</node>
 </node>
 </map>
