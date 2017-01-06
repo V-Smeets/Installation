@@ -1703,14 +1703,23 @@
 <node TEXT="chmod 440 /etc/sudoers.d/vincent" ID="ID_1774363324"/>
 </node>
 </node>
+<node TEXT="locales" ID="ID_13884819">
+<node TEXT="dpkg-reconfigure locales" ID="ID_611111559">
+<node TEXT="en_US.UTF-8" ID="ID_943477695"/>
+<node TEXT="nl_NL.UTF-8" ID="ID_1703332089"/>
+<node TEXT="Default locale for the system environment" ID="ID_684912611">
+<node TEXT="en_US.UTF-8" ID="ID_1212585836"/>
+</node>
+</node>
+</node>
 <node TEXT="apt" ID="ID_1944218353">
 <node TEXT="/etc/apt/sources.list" ID="ID_190368319">
-<node TEXT="deb     http://httpredir.debian.org/debian/     jessie  main contrib non-free" ID="ID_342873658" />
-<node TEXT="deb-src http://httpredir.debian.org/debian/     jessie  main contrib non-free" ID="ID_871288530" />
-<node TEXT="deb     http://security.debian.org/     jessie/updates  main contrib non-free" ID="ID_1391510732" />
-<node TEXT="deb-src http://security.debian.org/     jessie/updates  main contrib non-free" ID="ID_662781588" />
-<node TEXT="deb     http://httpredir.debian.org/debian/     jessie-updates  main contrib non-free" ID="ID_43771632" />
-<node TEXT="deb-src http://httpredir.debian.org/debian/     jessie-updates  main contrib non-free" ID="ID_286137446" />
+<node TEXT="deb     http://httpredir.debian.org/debian/     jessie  main contrib non-free" ID="ID_342873658"/>
+<node TEXT="deb-src http://httpredir.debian.org/debian/     jessie  main contrib non-free" ID="ID_871288530"/>
+<node TEXT="deb     http://security.debian.org/     jessie/updates  main contrib non-free" ID="ID_1391510732"/>
+<node TEXT="deb-src http://security.debian.org/     jessie/updates  main contrib non-free" ID="ID_662781588"/>
+<node TEXT="deb     http://httpredir.debian.org/debian/     jessie-updates  main contrib non-free" ID="ID_43771632"/>
+<node TEXT="deb-src http://httpredir.debian.org/debian/     jessie-updates  main contrib non-free" ID="ID_286137446"/>
 </node>
 <node TEXT="apt-get update" ID="ID_1647028721"/>
 <node TEXT="apt-get upgrade" ID="ID_1777818035"/>
