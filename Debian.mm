@@ -1692,6 +1692,17 @@
 <node TEXT="/dev/sda" ID="ID_531414678"/>
 </node>
 </node>
+<node TEXT="Users" ID="ID_344829450">
+<node TEXT="vincent" ID="ID_1777537009">
+<node TEXT="adduser --gecos &quot;Vincent Smeets&quot; vincent" ID="ID_150463709"/>
+<node TEXT="adduser vincent adm" ID="ID_521906237"/>
+<node TEXT="adduser vincent sudo" ID="ID_1818208924"/>
+<node TEXT="/etc/sudoers.d/vincent" ID="ID_1990566159">
+<node TEXT="vincent    ALL=(ALL)    NOPASSWD:    ALL" ID="ID_1949318881"/>
+</node>
+<node TEXT="chmod 440 /etc/sudoers.d/vincent" ID="ID_1774363324"/>
+</node>
+</node>
 </node>
 </node>
 </map>
