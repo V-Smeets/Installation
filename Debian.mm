@@ -1703,6 +1703,26 @@
 <node TEXT="chmod 440 /etc/sudoers.d/vincent" ID="ID_1774363324"/>
 </node>
 </node>
+<node TEXT="apt" ID="ID_1944218353">
+<node TEXT="/etc/apt/sources.list" ID="ID_190368319">
+<node TEXT="deb     http://httpredir.debian.org/debian/     jessie  main contrib non-free" ID="ID_342873658" />
+<node TEXT="deb-src http://httpredir.debian.org/debian/     jessie  main contrib non-free" ID="ID_871288530" />
+<node TEXT="deb     http://security.debian.org/     jessie/updates  main contrib non-free" ID="ID_1391510732" />
+<node TEXT="deb-src http://security.debian.org/     jessie/updates  main contrib non-free" ID="ID_662781588" />
+<node TEXT="deb     http://httpredir.debian.org/debian/     jessie-updates  main contrib non-free" ID="ID_43771632" />
+<node TEXT="deb-src http://httpredir.debian.org/debian/     jessie-updates  main contrib non-free" ID="ID_286137446" />
+</node>
+<node TEXT="apt-get update" ID="ID_1647028721"/>
+<node TEXT="apt-get upgrade" ID="ID_1777818035"/>
+<node TEXT="apt-get install aptitude git gitk" ID="ID_1542142204"/>
+<node TEXT="mkdir -p ~/src" ID="ID_270911707"/>
+<node TEXT="git clone https://github.com/V-Smeets/profile.git ~/src/profile" ID="ID_630934589"/>
+<node TEXT="ln --symbolic --force src/profile/.profile ." ID="ID_12638261"/>
+<node TEXT="/root/.aptitude/config" ID="ID_421059951">
+<node TEXT="aptitude::UI::Default-Grouping &quot;status,pattern(?or(?archive(),?true))&quot;;" ID="ID_726079407"/>
+</node>
+<node TEXT="apt-reset" ID="ID_594846832"/>
+</node>
 </node>
 </node>
 </map>
