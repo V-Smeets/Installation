@@ -1829,6 +1829,10 @@
 </node>
 </node>
 </node>
+<node TEXT="Officejet 6500" ID="ID_1463989681">
+<node TEXT="hp-setup" ID="ID_1762297087"/>
+<node TEXT="lpoptions -d Officejet_6500_E710a-f" ID="ID_25976232"/>
+</node>
 <node TEXT="Google Chrome" ID="ID_1927100499">
 <node TEXT="https://www.google.com/chrome" ID="ID_69476066"/>
 <node TEXT="apt-reset" ID="ID_920899633">
