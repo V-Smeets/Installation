@@ -1723,6 +1723,9 @@
 </node>
 <node TEXT="apt-reset" ID="ID_594846832"/>
 </node>
+<node TEXT="ntp" ID="ID_1450141710">
+<node TEXT="timedatectl set-ntp true" ID="ID_1623637071"/>
+</node>
 </node>
 </node>
 </map>
