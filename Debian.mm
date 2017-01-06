@@ -1726,6 +1726,7 @@
 <node TEXT="task-dutch-desktop" ID="ID_1795557997"/>
 <node TEXT="task-dutch-kde-desktop" ID="ID_1370215898"/>
 <node TEXT="exim4" ID="ID_1315520470"/>
+<node TEXT="unattended-upgrades" ID="ID_734432891"/>
 </node>
 </node>
 <node TEXT="locales" ID="ID_13884819">
@@ -1804,6 +1805,27 @@
 <node TEXT="update-exim4.conf.template  -r" ID="ID_551690929"/>
 <node TEXT="update-exim4.conf" ID="ID_1111612764"/>
 <node TEXT="service exim4 restart" ID="ID_558162519"/>
+</node>
+<node TEXT="unattended-upgrades" ID="ID_1789267503">
+<node TEXT="apt-reset" ID="ID_374095394">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_734432891" STARTINCLINATION="94;0;" ENDINCLINATION="94;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="/etc/apt/apt.conf.d/50unattended-upgrades" ID="ID_465457612">
+<node TEXT="Unattended-Upgrade::Origins-Pattern" ID="ID_722717240">
+<node TEXT="&quot;o=Debian,n=jessie&quot;;" ID="ID_1146373507"/>
+<node TEXT="&quot;o=Debian,n=jessie-updates&quot;;" ID="ID_1530143006"/>
+<node TEXT="&quot;o=Debian,n=jessie-proposed-updates&quot;;" ID="ID_88290376"/>
+<node TEXT="&quot;o=Debian,n=jessie,l=Debian-Security&quot;;" ID="ID_243913186"/>
+</node>
+<node TEXT="Unattended-Upgrade::Mail" ID="ID_413969156">
+<node TEXT="&quot;root&quot;;" ID="ID_84835037"/>
+</node>
+</node>
+<node TEXT="dpkg-reconfigure unattended-upgrades" ID="ID_1230511464">
+<node TEXT="Automatically download and install stable updates?" ID="ID_1407785641">
+<node TEXT="Yes" ID="ID_1375565280"/>
+</node>
+</node>
 </node>
 </node>
 </node>
