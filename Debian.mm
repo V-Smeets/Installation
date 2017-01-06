@@ -1703,15 +1703,6 @@
 <node TEXT="chmod 440 /etc/sudoers.d/vincent" ID="ID_1774363324"/>
 </node>
 </node>
-<node TEXT="locales" ID="ID_13884819">
-<node TEXT="dpkg-reconfigure locales" ID="ID_611111559">
-<node TEXT="en_US.UTF-8" ID="ID_943477695"/>
-<node TEXT="nl_NL.UTF-8" ID="ID_1703332089"/>
-<node TEXT="Default locale for the system environment" ID="ID_684912611">
-<node TEXT="en_US.UTF-8" ID="ID_1212585836"/>
-</node>
-</node>
-</node>
 <node TEXT="apt" ID="ID_1944218353">
 <node TEXT="/etc/apt/sources.list" ID="ID_190368319">
 <node TEXT="deb     http://httpredir.debian.org/debian/     jessie  main contrib non-free" ID="ID_342873658"/>
@@ -1730,7 +1721,31 @@
 <node TEXT="/root/.aptitude/config" ID="ID_421059951">
 <node TEXT="aptitude::UI::Default-Grouping &quot;status,pattern(?or(?archive(),?true))&quot;;" ID="ID_726079407"/>
 </node>
-<node TEXT="apt-reset" ID="ID_594846832"/>
+<node TEXT="apt-reset" ID="ID_594846832">
+<node TEXT="task-dutch" ID="ID_285194447"/>
+<node TEXT="task-dutch-desktop" ID="ID_1795557997"/>
+<node TEXT="task-dutch-kde-desktop" ID="ID_1370215898"/>
+</node>
+</node>
+<node TEXT="locales" ID="ID_13884819">
+<node TEXT="apt" ID="ID_1615817834">
+<node TEXT="task-dutch" ID="ID_1815235384">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_285194447" STARTINCLINATION="64;0;" ENDINCLINATION="64;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="task-dutch-desktop" ID="ID_1691924263">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1795557997" STARTINCLINATION="64;0;" ENDINCLINATION="64;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="task-dutch-kde-desktop" ID="ID_751260378">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1370215898" STARTINCLINATION="64;0;" ENDINCLINATION="64;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+</node>
+<node TEXT="dpkg-reconfigure locales" ID="ID_611111559">
+<node TEXT="en_US.UTF-8" ID="ID_943477695"/>
+<node TEXT="nl_NL.UTF-8" ID="ID_1703332089"/>
+<node TEXT="Default locale for the system environment" ID="ID_684912611">
+<node TEXT="en_US.UTF-8" ID="ID_1212585836"/>
+</node>
+</node>
 </node>
 <node TEXT="ntp" ID="ID_1450141710">
 <node TEXT="timedatectl set-ntp true" ID="ID_1623637071"/>
