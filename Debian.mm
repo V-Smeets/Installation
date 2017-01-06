@@ -1725,6 +1725,7 @@
 <node TEXT="task-dutch" ID="ID_285194447"/>
 <node TEXT="task-dutch-desktop" ID="ID_1795557997"/>
 <node TEXT="task-dutch-kde-desktop" ID="ID_1370215898"/>
+<node TEXT="exim4" ID="ID_1315520470"/>
 </node>
 </node>
 <node TEXT="locales" ID="ID_13884819">
@@ -1749,6 +1750,60 @@
 </node>
 <node TEXT="ntp" ID="ID_1450141710">
 <node TEXT="timedatectl set-ntp true" ID="ID_1623637071"/>
+</node>
+<node TEXT="exim4" ID="ID_83447763">
+<node TEXT="https://wiki.debian.org/GmailAndExim4" ID="ID_433748839"/>
+<node TEXT="apt-reset" ID="ID_161064524">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1315520470" STARTINCLINATION="94;0;" ENDINCLINATION="94;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="dpkg-reconfigure exim4-config" ID="ID_240584056">
+<node TEXT="mail sent by smarthost; received via SMTP or fetchmail" ID="ID_1225320324"/>
+<node TEXT="System mail name:" ID="ID_154949465">
+<node TEXT="Stamboom.Home" ID="ID_223752979"/>
+</node>
+<node TEXT="IP-addresses to listen on for incoming SMTP connections:" ID="ID_1427538885">
+<node TEXT="127.0.0.1 ; ::1" ID="ID_264537541"/>
+</node>
+<node TEXT="Other destinations for which mail is accepted:" ID="ID_800589785">
+<node TEXT="&lt;empty&gt;" ID="ID_669329112"/>
+</node>
+<node TEXT="Machines to relay mail for:" ID="ID_1835190966">
+<node TEXT="&lt;empty&gt;" ID="ID_908145599"/>
+</node>
+<node TEXT="IP address or host name of the outgoing smarthost:" ID="ID_1365963546">
+<node TEXT="smtp.gmail.com::587" ID="ID_1052215803"/>
+</node>
+<node TEXT="Hide local mail name in outgoing mail?" ID="ID_454991104">
+<node TEXT="No" ID="ID_1347545769"/>
+</node>
+<node TEXT="Keep number of DNS-queries minimal (Dial-on-Demand)?" ID="ID_1209905905">
+<node TEXT="No" ID="ID_663911610"/>
+</node>
+<node TEXT="Delivery method for local mail:" ID="ID_1694830908">
+<node TEXT="mbox format in /var/mail/" ID="ID_996282539"/>
+</node>
+<node TEXT="Split configuration into small files?" ID="ID_1788235016">
+<node TEXT="Yes" ID="ID_646792162"/>
+</node>
+</node>
+<node TEXT="/etc/exim4/passwd.client" ID="ID_156558772">
+<node TEXT="smtp.gmail.com:User@GMail.com:PaSsWoRd" ID="ID_564634083"/>
+<node TEXT="gmail-smtp-msa.l.google.com:User@GMail.com:PaSsWoRd" ID="ID_199455931"/>
+<node TEXT="*.1e100.net:User@GMail.com:PaSsWoRd" ID="ID_503383757"/>
+</node>
+<node TEXT="/etc/email-addresses" ID="ID_501720965">
+<node TEXT="melanie:        Auer.Melanie@GMail.com" ID="ID_71553170"/>
+<node TEXT="vincent:        Vincent.VSmeets@GMail.com" ID="ID_1612105597"/>
+</node>
+<node TEXT="/etc/aliases" ID="ID_881955824">
+<node TEXT="root: vincent" ID="ID_1699522788"/>
+</node>
+<node TEXT="/etc/exim4/conf.d/rewrite/31_exim4-config_rewriting.rul" ID="ID_1056258478">
+<node TEXT="### rewrite/31_exim4-config_rewriting.rul&#xa;#################################&#xa;&#xa;# This rewriting rule is particularily useful for dialup users who&#xa;# don&apos;t have their own domain, but could be useful for anyone.&#xa;# It looks up the real address of all local users in a file&#xa;.ifndef NO_EAA_REWRITE_REWRITE&#xa;*@+local_domains &quot;${lookup{${local_part}}lsearch{/etc/email-addresses}\&#xa;                   {$value}fail}&quot; Eh&#xa;# identical rewriting rule for /etc/mailname&#xa;*@ETC_MAILNAME &quot;${lookup{${local_part}}lsearch{/etc/email-addresses}\&#xa;                   {$value}fail}&quot; Eh&#xa;.endif" ID="ID_1923968234"/>
+</node>
+<node TEXT="update-exim4.conf.template  -r" ID="ID_551690929"/>
+<node TEXT="update-exim4.conf" ID="ID_1111612764"/>
+<node TEXT="service exim4 restart" ID="ID_558162519"/>
 </node>
 </node>
 </node>
