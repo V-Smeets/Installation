@@ -670,6 +670,12 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_55619442" STARTINCLINATION="391;0;" ENDINCLINATION="391;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
+<node TEXT="/etc/aiccu-subnets.sh" ID="ID_1442245474">
+<node TEXT="#!/bin/sh&#xa;#&#xa;ip addr add 2001:1af8:fe00:8499::1/64 dev eth0" ID="ID_89011426"/>
+</node>
+<node TEXT="/etc/aiccu.conf" ID="ID_253011220">
+<node TEXT="setupscript /etc/aiccu-subnets.sh" ID="ID_1860583544"/>
+</node>
 <node TEXT="/etc/cron.hourly/aiccu-restart" ID="ID_1478215337">
 <node TEXT="#!/bin/sh&#xa;#&#xa;ping6 -q -w 5 2001:1af8:fe00:499::1 &gt;/dev/null || service aiccu restart" ID="ID_1400835324"/>
 </node>
@@ -677,12 +683,6 @@
 <node TEXT="radvd" ID="ID_1774051343">
 <node TEXT="apt-get" ID="ID_1992310622">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1810897072" STARTINCLINATION="200;0;" ENDINCLINATION="200;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-</node>
-<node TEXT="/etc/aiccu.conf" ID="ID_253011220">
-<node TEXT="setupscript /etc/aiccu-subnets.sh" ID="ID_1860583544"/>
-</node>
-<node TEXT="/etc/aiccu-subnets.sh" ID="ID_1442245474">
-<node TEXT="#!/bin/sh&#xa;#&#xa;ip addr add 2001:1af8:fe00:8499::1/64 dev eth0" ID="ID_89011426"/>
 </node>
 <node TEXT="/etc/sysctl.d/50-radvd-local.conf" ID="ID_444166171">
 <node TEXT="net.ipv6.conf.all.forwarding=1" ID="ID_524386793"/>
