@@ -229,6 +229,18 @@
 </node>
 </node>
 </node>
+<node TEXT="Network" ID="ID_1442938267">
+<node TEXT="/etc/network/interfaces" ID="ID_1136765448">
+<node TEXT="iface eth0 inet manual" ID="ID_1360973524"/>
+</node>
+<node TEXT="/etc/dhcpcd.conf" ID="ID_1108763806">
+<node TEXT="interface        eth0" ID="ID_362186058"/>
+<node TEXT="static        ip_address=192.168.1.2/24" ID="ID_1219056832"/>
+<node TEXT="static        routers=192.168.1.1" ID="ID_1056468557"/>
+<node TEXT="static        domain_name=Home" ID="ID_1950429109"/>
+<node TEXT="static        domain_name_servers=192.168.1.1" ID="ID_35317963"/>
+</node>
+</node>
 <node TEXT="Users" ID="ID_1490176551">
 <node TEXT="vincent" ID="ID_1992912034">
 <node TEXT="adduser --gecos &quot;Vincent Smeets&quot; vincent" ID="ID_1758219654"/>
@@ -297,7 +309,7 @@
 <node TEXT="interfaces" ID="ID_1643138090">
 <node TEXT="world" ID="ID_862281526">
 <node TEXT="eth0" ID="ID_1660872267">
-<node TEXT="dhcp,tcpflags" ID="ID_297239263"/>
+<node TEXT="tcpflags" ID="ID_297239263"/>
 </node>
 </node>
 <node TEXT="world" ID="ID_465079525">
