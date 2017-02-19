@@ -72,7 +72,7 @@
 <node TEXT="192.168.1.2" ID="ID_1030221377"/>
 </node>
 </node>
-<node TEXT="osmc" ID="ID_1468506990">
+<node TEXT="LibreELEC2" ID="ID_1468506990">
 <node TEXT="B8:27:EB:FF:09:39" ID="ID_400463787">
 <node TEXT="192.168.1.3" ID="ID_361787286"/>
 </node>
@@ -80,6 +80,11 @@
 <node TEXT="RaspberryTom" ID="ID_1976184441">
 <node TEXT="B8:27:EB:BB:D9:F1" ID="ID_293186182">
 <node TEXT="192.168.1.4" ID="ID_68656766"/>
+</node>
+</node>
+<node TEXT="LibreELEC" ID="ID_1128256058">
+<node TEXT="B8:27:EB:AA:5C:6C" ID="ID_1002836875">
+<node TEXT="192.169.1.5" ID="ID_430179005"/>
 </node>
 </node>
 <node TEXT="HP2D93F8" ID="ID_1306508137">
@@ -150,11 +155,14 @@
 <node TEXT="RaspberryPi.Home" ID="ID_1330240257">
 <node TEXT="192.168.1.2" ID="ID_1849944391"/>
 </node>
-<node TEXT="osmc.Home" ID="ID_1900628236">
+<node TEXT="LibreELEC2.Home" ID="ID_1900628236">
 <node TEXT="192.168.1.3" ID="ID_757589178"/>
 </node>
 <node TEXT="RaspberryTom.Home" ID="ID_1911656648">
 <node TEXT="192.168.1.4" ID="ID_1461043944"/>
+</node>
+<node TEXT="LibreELEC.Home" ID="ID_606227997">
+<node TEXT="192.168.1.5" ID="ID_1515322487"/>
 </node>
 <node TEXT="HP2D93F8.Home" ID="ID_1549460615">
 <node TEXT="192.168.1.100" ID="ID_1437217201"/>
