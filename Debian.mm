@@ -265,7 +265,7 @@
 <node TEXT="apt-reset" ID="ID_692528348">
 <node TEXT="aiccu" ID="ID_1533546666"/>
 <node TEXT="apache2 libapache2-mod-authnz-external libapache2-mod-authz-unixgroup pwauth awstats" ID="ID_303545824"/>
-<node TEXT="exim4" ID="ID_201126859"/>
+<node TEXT="exim4&#xa;exim4-daemon-heavy&#xa;spf-tools-perl" ID="ID_201126859"/>
 <node TEXT="shorewall" ID="ID_739921708"/>
 <node TEXT="shorewall6" ID="ID_1194409487"/>
 <node TEXT="radvd" ID="ID_1810897072"/>
@@ -601,29 +601,23 @@
 <node TEXT="timedatectl set-ntp true" ID="ID_1630790881"/>
 </node>
 <node TEXT="exim4" ID="ID_1380953093">
-<node TEXT="https://wiki.debian.org/GmailAndExim4" ID="ID_1386941183"/>
+<node TEXT="https://wiki.debian.org/Exim" ID="ID_1386941183"/>
 <node TEXT="apt-reset" ID="ID_1821346417">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_201126859" STARTINCLINATION="153;0;" ENDINCLINATION="153;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="dpkg-reconfigure exim4-config" ID="ID_1900733951">
-<node TEXT="mail sent by smarthost; received via SMTP or fetchmail" ID="ID_359138867"/>
+<node TEXT="internet site; mail is sent and received directly using SMTP" ID="ID_359138867"/>
 <node TEXT="System mail name:" ID="ID_1309296803">
-<node TEXT="RaspberryPi.Home" ID="ID_720731166"/>
+<node TEXT="vsmeets.nl" ID="ID_720731166"/>
 </node>
 <node TEXT="IP-addresses to listen on for incoming SMTP connections:" ID="ID_1937416470">
-<node TEXT="127.0.0.1 ; ::1" ID="ID_932018318"/>
+<node TEXT="&lt;empty&gt;" ID="ID_932018318"/>
 </node>
 <node TEXT="Other destinations for which mail is accepted:" ID="ID_1490320462">
-<node TEXT="&lt;empty&gt;" ID="ID_1671510786"/>
+<node TEXT="vsmeets.nl" ID="ID_1671510786"/>
 </node>
 <node TEXT="Machines to relay mail for:" ID="ID_1476102755">
-<node TEXT="&lt;empty&gt;" ID="ID_519477607"/>
-</node>
-<node TEXT="IP address or host name of the outgoing smarthost:" ID="ID_405464801">
-<node TEXT="smtp.gmail.com::587" ID="ID_251998797"/>
-</node>
-<node TEXT="Hide local mail name in outgoing mail?" ID="ID_632297706">
-<node TEXT="No" ID="ID_831259255"/>
+<node TEXT="192.168.1.0/24; 2001:1af8:fe00:8499::/64" ID="ID_519477607"/>
 </node>
 <node TEXT="Keep number of DNS-queries minimal (Dial-on-Demand)?" ID="ID_1402563888">
 <node TEXT="No" ID="ID_1413420523"/>
@@ -635,18 +629,14 @@
 <node TEXT="Yes" ID="ID_820392308"/>
 </node>
 </node>
-<node TEXT="/etc/exim4/passwd.client" ID="ID_574270445">
-<node TEXT="smtp.gmail.com:User@GMail.com:PaSsWoRd" ID="ID_342478653"/>
-<node TEXT="gmail-smtp-msa.l.google.com:User@GMail.com:PaSsWoRd" ID="ID_1577514814"/>
-<node TEXT="*.1e100.net:User@GMail.com:PaSsWoRd" ID="ID_481299984"/>
-</node>
-<node TEXT="/etc/email-addresses" ID="ID_295140012">
-<node TEXT="tom: Tom.TSmeets@GMail.com" ID="ID_1393643466"/>
-<node TEXT="vincent: Vincent.VSmeets@GMail.com" ID="ID_1913446026"/>
-</node>
 <node TEXT="shorewall" ID="ID_473580089">
 <node TEXT="rules" ID="ID_227339151">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1459492471" STARTINCLINATION="453;0;" ENDINCLINATION="453;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_180206457" STARTINCLINATION="343;0;" ENDINCLINATION="343;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_346444547" STARTINCLINATION="355;0;" ENDINCLINATION="355;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_573478231" STARTINCLINATION="449;0;" ENDINCLINATION="449;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_739050937" STARTINCLINATION="648;0;" ENDINCLINATION="648;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_904691153" STARTINCLINATION="522;0;" ENDINCLINATION="522;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 <node TEXT="update-exim4.conf" ID="ID_1391706524"/>
