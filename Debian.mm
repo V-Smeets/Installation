@@ -249,7 +249,7 @@
 <node TEXT="echo &quot;vincent ALL=(ALL) NOPASSWD: ALL&quot; | sudo tee /etc/sudoers.d/vincent" ID="ID_1959289773"/>
 </node>
 <node TEXT="pi" ID="ID_1294971007">
-<node TEXT="usermod --expiredate 1 --lock pi" ID="ID_1804592380"/>
+<node TEXT="deluser --remove-home pi" ID="ID_702874855"/>
 </node>
 <node TEXT="tom" ID="ID_1298493886">
 <node TEXT="adduser --disabled-login --gecos &quot;Tom Smeets&quot; tom" ID="ID_1592167378"/>
