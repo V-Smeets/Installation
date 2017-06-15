@@ -1,4 +1,4 @@
-<map version="freeplane 1.5.9">
+<map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Debian" ID="ID_648313087"><hook NAME="MapStyle">
     <properties fit_to_viewport="false;"/>
@@ -818,6 +818,196 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_910712448" STARTINCLINATION="751;0;" ENDINCLINATION="751;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
+</node>
+</node>
+<node TEXT="VSmeets" POSITION="right" ID="ID_1715460583">
+<node TEXT="AWS" ID="ID_812716318">
+<node TEXT="Instance" ID="ID_1401117829">
+<node TEXT="Debian 9 Stretch" ID="ID_1470239618"/>
+</node>
+<node TEXT="Security Group" ID="ID_293059700">
+<node TEXT="Inbound" ID="ID_797789273">
+<node TEXT="SSH" ID="ID_1578557057">
+<node TEXT="0.0.0.0/0" ID="ID_748587328"/>
+</node>
+<node TEXT="HTTP" ID="ID_1096248582">
+<node TEXT="0.0.0.0/0" ID="ID_1740875500"/>
+</node>
+<node TEXT="HTTPS" ID="ID_704923248">
+<node TEXT="0.0.0.0/0" ID="ID_1365493883"/>
+</node>
+</node>
+<node TEXT="Outbound" ID="ID_1884853425">
+<node TEXT="All traffic" ID="ID_1157284366">
+<node TEXT="0.0.0.0/0" ID="ID_445934771"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="locales" ID="ID_1799698294">
+<node TEXT="dpkg-reconfigure locales" ID="ID_1332291941">
+<node TEXT="Locales to be generated:" ID="ID_1959710180">
+<node TEXT="en_US.UTF-8" ID="ID_1879219621"/>
+<node TEXT="nl_NL.UTF-8" ID="ID_1492117936"/>
+</node>
+<node TEXT="Default locale for the system environment:" ID="ID_978952169">
+<node TEXT="en_US.UTF-8" ID="ID_1825737337"/>
+</node>
+</node>
+</node>
+<node TEXT="systemd" ID="ID_1957987072">
+<node TEXT="mkdir -p /var/log/journal" ID="ID_846117166"/>
+</node>
+<node TEXT="apt" ID="ID_1747832664">
+<node TEXT="apt-get update" ID="ID_1628239126"/>
+<node TEXT="apt-get upgrade" ID="ID_1517246585"/>
+<node TEXT="apt-get install git" ID="ID_199899408">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1321758984" STARTINCLINATION="336;0;" ENDINCLINATION="336;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="mkdir -p ~/src" ID="ID_1815767116"/>
+<node TEXT="git clone https://github.com/V-Smeets/profile.git ~/src/profile" ID="ID_1081894650"/>
+<node TEXT="ln --symbolic --force src/profile/.profile ~" ID="ID_1945177411"/>
+<node TEXT="apt-reset" ID="ID_1838063676">
+<node TEXT="Base system" ID="ID_114847287">
+<node TEXT="grub-pc" ID="ID_870627075"/>
+<node TEXT="linux-image-${currentArchitecture}" ID="ID_1270034210"/>
+<node TEXT="apt-transport-https" ID="ID_1624120953"/>
+<node TEXT="awscli" ID="ID_1536482962"/>
+<node TEXT="cloud-init" ID="ID_1495506688"/>
+<node TEXT="cloud-utils" ID="ID_1675202701"/>
+<node TEXT="distro-info" ID="ID_1919181834"/>
+<node TEXT="mdadm" ID="ID_133316640"/>
+<node TEXT="popularity-contest" ID="ID_1687775393"/>
+<node TEXT="python-boto" ID="ID_572029229"/>
+<node TEXT="python-openssl" ID="ID_1304678951"/>
+<node TEXT="python3-boto" ID="ID_1101171029"/>
+<node TEXT="python3-pil" ID="ID_1891370050"/>
+<node TEXT="python3-pygments" ID="ID_1420502009"/>
+<node TEXT="strace" ID="ID_1160865020"/>
+<node TEXT="sudo" ID="ID_589221646"/>
+<node TEXT="tcpdump" ID="ID_1820502603"/>
+<node TEXT="unattended-upgrades" ID="ID_211381910"/>
+</node>
+<node TEXT="Tasks" ID="ID_1587187818">
+<node TEXT="task-english" ID="ID_1419119112"/>
+<node TEXT="task-ssh-server" ID="ID_837901957"/>
+</node>
+<node TEXT="aptitude" ID="ID_1332558496"/>
+<node TEXT="git gitk" ID="ID_1321758984"/>
+<node TEXT="nginx ssl-cert" ID="ID_581859630"/>
+<node TEXT="python-certbot-nginx" ID="ID_1167153435"/>
+<node TEXT="python-pip build-essential python-all-dev python-wheel" ID="ID_1509480298"/>
+</node>
+<node TEXT="/root/.aptitude/config" ID="ID_1488526746">
+<node TEXT="aptitude::UI::Default-Grouping" ID="ID_113924142">
+<node TEXT="status,pattern(?or(?archive(),?true))" ID="ID_11850169"/>
+</node>
+</node>
+</node>
+<node TEXT="nginx" ID="ID_340781623">
+<node TEXT="apt-reset" ID="ID_490716946">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_581859630" STARTINCLINATION="210;0;" ENDINCLINATION="210;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="/etc/nginx/sites-available/default" ID="ID_1194706614">
+<node TEXT="server" ID="ID_1900516866">
+<node TEXT="listen" ID="ID_824187951">
+<node TEXT="80 default_server" ID="ID_763527407"/>
+</node>
+<node TEXT="return" ID="ID_378772874">
+<node TEXT="444" OBJECT="java.lang.Long|444" ID="ID_129506588"/>
+</node>
+</node>
+<node TEXT="# vim:autoindent:filetype=nginx:" ID="ID_1828731876"/>
+</node>
+<node TEXT="/etc/nginx/htpasswd.vsmeets.nl" ID="ID_583475789">
+<node TEXT="chmod 640 htpasswd.vsmeets.nl" ID="ID_1524466799"/>
+<node TEXT="chown root:www-data htpasswd.vsmeets.nl" ID="ID_826670477"/>
+<node TEXT="echo &quot;vincent:$(echo &quot;password&quot; | openssl passwd -apr1 -stdin)&quot;" ID="ID_792244668"/>
+</node>
+<node TEXT="mkdir -p /var/www/www.vsmeets.nl/keepass" ID="ID_1373324845"/>
+<node TEXT="chown -R www-data /var/www/www.vsmeets.nl" ID="ID_484160645"/>
+<node TEXT="/etc/nginx/sites-available/www.vsmeets.nl" ID="ID_1172084913">
+<node TEXT="server" ID="ID_98838506">
+<node TEXT="listen" ID="ID_1496092426">
+<node TEXT="80" OBJECT="java.lang.Long|80" ID="ID_1698493976"/>
+</node>
+<node TEXT="server_name" ID="ID_68525832">
+<node TEXT="www.vsmeets.nl" ID="ID_396714925"/>
+</node>
+<node TEXT="access_log" ID="ID_1883443337">
+<node TEXT="/var/log/nginx/www.vsmeets.nl.access.log" ID="ID_1265613358"/>
+</node>
+<node TEXT="error_log" ID="ID_390638518">
+<node TEXT="/var/log/nginx/www.vsmeets.nl.error.log" ID="ID_1070224714"/>
+</node>
+<node TEXT="return" ID="ID_1257369287">
+<node TEXT="301 https://$server_name$request_uri" ID="ID_522849445"/>
+</node>
+</node>
+<node TEXT="server" ID="ID_1867689829">
+<node TEXT="listen" ID="ID_1545223460">
+<node TEXT="443 ssl" ID="ID_740658500"/>
+</node>
+<node TEXT="server_name" ID="ID_675866840">
+<node TEXT="www.vsmeets.nl" ID="ID_1216826123"/>
+</node>
+<node TEXT="ssl_certificate" ID="ID_1215403866">
+<node TEXT="/etc/letsencrypt/live/www2.vsmeets.nl/fullchain.pem" ID="ID_1560864443"/>
+</node>
+<node TEXT="ssl_certificate_key" ID="ID_1227368224">
+<node TEXT="/etc/letsencrypt/live/www2.vsmeets.nl/privkey.pem" ID="ID_1041523098"/>
+</node>
+<node TEXT="include" ID="ID_1265730470">
+<node TEXT="/etc/letsencrypt/options-ssl-nginx.conf" ID="ID_1850525286"/>
+</node>
+<node TEXT="access_log" ID="ID_644937751">
+<node TEXT="/var/log/nginx/www.vsmeets.nl.access.log" ID="ID_244034912"/>
+</node>
+<node TEXT="error_log" ID="ID_1207989336">
+<node TEXT="/var/log/nginx/www.vsmeets.nl.error.log" ID="ID_1639092221"/>
+</node>
+<node TEXT="location /" ID="ID_1277215808">
+<node TEXT="root" ID="ID_1120139541">
+<node TEXT="/var/www/www.vsmeets.nl" ID="ID_1674392304"/>
+</node>
+<node TEXT="index" ID="ID_895468702">
+<node TEXT="index.html" ID="ID_38227816"/>
+</node>
+<node TEXT="location /keepass" ID="ID_1223335485">
+<node TEXT="satisfy" ID="ID_1102930464">
+<node TEXT="all" ID="ID_139350754"/>
+</node>
+<node TEXT="auth_basic" ID="ID_1429026339">
+<node TEXT="vsmeets.nl" ID="ID_1947058649"/>
+</node>
+<node TEXT="auth_basic_user_file" ID="ID_1292523795">
+<node TEXT="htpasswd.vsmeets.nl" ID="ID_1594892462"/>
+</node>
+<node TEXT="dav_access" ID="ID_1339329246">
+<node TEXT="user:rw group:rw" ID="ID_678783155"/>
+</node>
+<node TEXT="dav_methods" ID="ID_1718654964">
+<node TEXT="PUT DELETE MKCOL COPY MOVE" ID="ID_1024920077"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="# vim:autoindent:filetype=nginx:" ID="ID_984237015"/>
+</node>
+<node TEXT="ln -s ../sites-available/www.vsmeets.nl /etc/nginx/sites-enabled" ID="ID_1552764450"/>
+</node>
+<node TEXT="certbot" ID="ID_590621975">
+<node TEXT="apt-reset" ID="ID_1098056804">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1167153435" STARTINCLINATION="747;0;" ENDINCLINATION="747;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="sudo certbot certonly --nginx --webroot-path /var/www/www.vsmeets.nl/ --domain www2.vsmeets.nl" ID="ID_130606570"/>
+</node>
+<node TEXT="ngxtop" ID="ID_38494908">
+<node TEXT="apt-reset" ID="ID_1762037079">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1509480298" STARTINCLINATION="256;0;" ENDINCLINATION="256;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="pip install ngxtop" ID="ID_196165341"/>
+<node TEXT="~/.local/bin/ngxtop --no-follow --access-log /var/log/nginx/www.vsmeets.nl.access.log" ID="ID_1615496803"/>
 </node>
 </node>
 <node TEXT="PC-Vincent" POSITION="right" ID="ID_803098348">
