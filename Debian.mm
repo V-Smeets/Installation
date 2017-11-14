@@ -1331,6 +1331,7 @@
 </node>
 <node TEXT="dhcp" ID="ID_1509804560">
 <node TEXT="/etc/dhcp/dhclient.conf" ID="ID_197607732">
+<node TEXT="send dhcp-requested-address 161.90.190.56;" ID="ID_824346420"/>
 <node TEXT="# CN=Subnets,CN=Sites,CN=Configuration,DC=ww930,DC=my-it-solutions,DC=net&#xa;interface &quot;enp0s25&quot; {&#xa;        #append rfc3442-classless-static-routes  0,                             161,90,190,1;&#xa;        append rfc3442-classless-static-routes  28, 193,103,165,160, 161,90,190,3;&#xa;}" ID="ID_300219698"/>
 <node TEXT="interface &quot;enxa0cec809014c&quot; {&#xa;        append rfc3442-classless-static-routes 0,                              192,168,8,1;&#xa;}" ID="ID_717224321"/>
 </node>
