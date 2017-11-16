@@ -1395,6 +1395,7 @@
 <node TEXT="openjdk-6-jdk" ID="ID_719527396"/>
 <node TEXT="shorewall" ID="ID_1047573065"/>
 <node TEXT="shorewall6" ID="ID_1914198455"/>
+<node TEXT="slapd ldapscripts ssl-cert" ID="ID_1105063928"/>
 </node>
 </node>
 <node TEXT="Shorewall" ID="ID_1312818152">
@@ -1462,6 +1463,11 @@
 <node TEXT="SSH(ACCEPT)" ID="ID_247640530">
 <node TEXT="atos" ID="ID_1989617539">
 <node TEXT="$FW" ID="ID_234201747"/>
+</node>
+</node>
+<node TEXT="LDAPS(ACCEPT)" ID="ID_1020197738">
+<node TEXT="atos" ID="ID_271006413">
+<node TEXT="$FW" ID="ID_1338782955"/>
 </node>
 </node>
 </node>
@@ -1536,6 +1542,11 @@
 <node TEXT="SSH(ACCEPT)" ID="ID_1724540739">
 <node TEXT="atos" ID="ID_1023699393">
 <node TEXT="$FW" ID="ID_918817100"/>
+</node>
+</node>
+<node TEXT="LDAPS(ACCEPT)" ID="ID_468777251">
+<node TEXT="atos" ID="ID_223085501">
+<node TEXT="$FW" ID="ID_303261939"/>
 </node>
 </node>
 </node>
@@ -1617,6 +1628,62 @@
 </node>
 <node TEXT="apt-reset" ID="ID_1809317462">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_719527396" STARTINCLINATION="204;0;" ENDINCLINATION="204;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+</node>
+<node TEXT="slapd" ID="ID_732915869">
+<node TEXT="apt-reset" ID="ID_1095296256">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1105063928" STARTINCLINATION="225;0;" ENDINCLINATION="225;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="dpkg-reconfigure -plow slapd" ID="ID_503580009">
+<node TEXT="Omit OpenLDAP server configuration?" ID="ID_943721625">
+<node TEXT="No" ID="ID_1465633897"/>
+</node>
+<node TEXT="DNS domain name:" ID="ID_1032136978">
+<node TEXT="meppen.ww930.my-it-solutions.net" ID="ID_1862531503"/>
+</node>
+<node TEXT="Organization name:" ID="ID_286574535">
+<node TEXT="Atos Information Technology GmbH" ID="ID_390337702"/>
+</node>
+<node TEXT="Administrator password:" ID="ID_867582372">
+<node TEXT="********" ID="ID_690060174"/>
+</node>
+<node TEXT="Database backend to use:" ID="ID_317895903">
+<node TEXT="MDB" ID="ID_1928454912"/>
+</node>
+<node TEXT="Do you want the database to be removed when slapd is purged?" ID="ID_1407917575">
+<node TEXT="Yes" ID="ID_1525311524"/>
+</node>
+<node TEXT="Move old database?" ID="ID_31199058">
+<node TEXT="Yes" ID="ID_254717735"/>
+</node>
+</node>
+<node TEXT="adduser openldap ssl-cert" ID="ID_396875898"/>
+<node TEXT="/etc/default/slapd" ID="ID_486496371">
+<node TEXT="SLAPD_SERVICES" ID="ID_47427507">
+<node TEXT="ldap:///" ID="ID_1320411020"/>
+<node TEXT="ldaps:///" ID="ID_1587882844"/>
+<node TEXT="ldapi:///" ID="ID_1235824928"/>
+</node>
+</node>
+<node TEXT="cn=config" ID="ID_1009212150">
+<node TEXT="ldapsearch -Y EXTERNAL -H ldapi:/// -b &quot;cn=config&quot;" ID="ID_398925328"/>
+<node TEXT="olcReferral" ID="ID_1301548603">
+<node TEXT="ldaps://ldap.myatos.net" ID="ID_777699887"/>
+</node>
+<node TEXT="olcTLSCACertificateFile" ID="ID_40984230">
+<node TEXT="/etc/ssl/certs/ca-certificates.crt" ID="ID_1675516271"/>
+</node>
+<node TEXT="olcTLSCertificateKeyFile" ID="ID_1150193860">
+<node TEXT="/etc/ssl/private/ssl-cert-snakeoil.key" ID="ID_1621290904"/>
+</node>
+<node TEXT="olcTLSCertificateFile" ID="ID_1263722468">
+<node TEXT="/etc/ssl/certs/ssl-cert-snakeoil.pem" ID="ID_1455917330"/>
+</node>
+</node>
+<node TEXT="dc=meppen,dc=ww930,dc=my-it-solutions,dc=net" ID="ID_1444819733"/>
+<node TEXT="shorewall" ID="ID_3074122">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1020197738" STARTINCLINATION="473;0;" ENDINCLINATION="473;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_468777251" STARTINCLINATION="458;0;" ENDINCLINATION="458;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
 </node>
