@@ -858,6 +858,14 @@
 <node TEXT="systemd" ID="ID_1957987072">
 <node TEXT="mkdir -p /var/log/journal" ID="ID_846117166"/>
 </node>
+<node TEXT="/etc/hostname" ID="ID_952843703">
+<node TEXT="VSmeets" ID="ID_533337239"/>
+</node>
+<node TEXT="/etc/hosts" ID="ID_185518302">
+<node TEXT="127.0.1.2" ID="ID_1192545003">
+<node TEXT="VSmeets.eu-central-1.compute.internal VSmeets" ID="ID_1864867434"/>
+</node>
+</node>
 <node TEXT="apt" ID="ID_1747832664">
 <node TEXT="apt-get update" ID="ID_1628239126"/>
 <node TEXT="apt-get upgrade" ID="ID_1517246585"/>
